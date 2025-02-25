@@ -1,3 +1,6 @@
+// Include the Bootstrap Nav Walker
+require_once get_template_directory() . '/includes/class-bootstrap-walker-nav-menu.php';
+
 <?php
 if (!defined('ABSPATH')) exit;
 
