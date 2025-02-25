@@ -9,8 +9,8 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
         <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
             <?php
             if (has_custom_logo()) {
@@ -31,19 +31,18 @@
                 'menu_class' => 'navbar-nav ms-auto',
                 'fallback_cb' => false,
                 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'depth' => 2,
-                'walker' => new Bootstrap_Walker_Nav_Menu()
+                'depth' => 2
             ));
             ?>
-            <?php if (!is_user_logged_in()) : ?>
-                <div class="ms-auto">
-                    <a href="<?php echo esc_url(wp_login_url()); ?>" class="btn log-but">Login</a>
-                </div>
-            <?php else : ?>
-                <div class="ms-auto">
-                    <a href="<?php echo esc_url(wp_logout_url()); ?>" class="btn log-but">Logout</a>
-                </div>
-            <?php endif; ?>
+            <div class="ms-2">
+                <?php if (!is_user_logged_in()) : ?>
+                    <a href="<?php echo esc_url(wp_login_url()); ?>" class="btn btn-primary">Login</a>
+                <?php else : ?>
+                    <a href="<?php echo esc_url(wp_logout_url()); ?>" class="btn btn-outline-primary">Logout</a>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 </nav>
+
+<div class="container mt-4">
