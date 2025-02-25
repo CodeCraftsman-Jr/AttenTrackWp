@@ -1,0 +1,47 @@
+<VirtualHost *:{{port}}>
+	ServerAdmin webmaster@localhost
+	DocumentRoot "{{root}}"
+
+	ErrorLog "{{logs.siteErrorLog}}"
+	LogFormat "%h %l %u %t \"%r\" %>s %b" common
+	CustomLog "{{logs.accessLog}}" common
+
+   	<Directory "{{root}}">
+       Options Indexes FollowSymLinks ExecCGI
+       AllowOverride All
+       Require all granted
+   </Directory>
+
+   <IfModule fcgid_module>
+		FcgidInitialEnv PHP_FCGI_MAX_REQUESTS 1000
+		AddHandler fcgid-script .php
+		FcgidWrapper "{{fcgidWrapperPath}}" .php
+		FcgidInitialEnv PHPRC "{{phprcPath}}"
+   </IfModule>
+
+    {{#if os.windows}}
+    <FilesMatch \.php$>
+	{{#unless shouldUseFcgid}}
+		ProxyFCGIBackendType GENERIC
+		SetHandler "proxy:fcgi://{{fastcgiWin32}}#"
+	{{/unless}}
+    </FilesMatch>
+    {{else}}
+    <FilesMatch \.php$>
+        SetHandler "proxy:{{fastcgiUnixSocket}}|fcgi://unused-domain-string-but-required/"
+    </FilesMatch>
+    {{/if}}
+
+    <Proxy fcgi://unused-domain-string-but-required>
+      ProxySet connectiontimeout=5 timeout=240 flushpackets=on
+    </Proxy>
+
+    # If the php file doesn't exist, disable the proxy handler.
+    # This will allow .htaccess rewrite rules to work and
+    # the client will see the default 404 page of Apache
+    RewriteCond %{REQUEST_FILENAME} \.php$
+    RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI} !-f
+    RewriteRule (.*) - [H=text/html]
+
+    SetEnvIf X-Forwarded-Proto "https" HTTPS=on
+</VirtualHost>
