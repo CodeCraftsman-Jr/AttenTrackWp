@@ -653,7 +653,6 @@ function attentrack_handle_subscription_purchase() {
         exit;
     }
 }
-add_action('admin_post_purchase_subscription', 'attentrack_handle_subscription_purchase');
 
 // Display subscription notices
 function attentrack_subscription_notices() {
