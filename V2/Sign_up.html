@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: none; /* Initially hide the body content */
+            background: url('https://static.vecteezy.com/system/resources/previews/006/712/955/non_2x/abstract-health-medical-science-consist-doctor-digital-wireframe-concept-modern-medical-technology-treatment-medicine-on-gray-background-for-template-web-design-or-presentation-vector.jpg') center/cover no-repeat;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .signup-container {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+        }
+        h3 {
+            color: #ffcc00;
+        }
+        .form-label, .text-center a {
+            color: #ffcc00;
+        }
+        .btn-primary {
+            background-color: #ffcc00;
+            border: none;
+            color: #6f2c91;
+        }
+        .btn-primary:hover {
+            background-color: #e6b800;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const correctPassword = "password"; // Set your password here
+            const userPassword = prompt("Please enter the password to view this page:");
+
+            if (userPassword === correctPassword) {
+                document.body.style.display = "flex"; // Show the content if password matches
+            } else {
+                alert("Incorrect password. You cannot access this page.");
+                document.body.innerHTML = "<h1 style='color: red; text-align: center; margin-top: 20%;'>Access Denied</h1>";
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="signup-container">
+        <h3 class="text-center mb-4">Sign Up</h3>
+        <!-- Sign up form -->
+        <form action="signup.php" method="POST">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+        </form>
+        <div class="text-center mt-3">
+            <p>Already have an account? <a href="signin.html">Sign In</a></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention Assessment Tests</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #d4fc79, #96e6a1);
+            padding: 20px;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 2px solid rgba(44, 62, 80, 0.1);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #34495e;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .grid-item {
+            flex: 0 0 300px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(44, 62, 80, 0.1);
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .grid-item.disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .grid-item.disabled::after {
+            content: attr(data-message);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            text-align: center;
+            width: 80%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .grid-item.disabled:hover::after {
+            opacity: 1;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 4px solid #3498db;
+        }
+
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(145deg, #ff6ec7, #ff9a8b);
+        }
+
+        .grid-item h2 {
+            color: #fff;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid-item p {
+            color: #fff;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item button {
+            background: rgba(255, 255, 255, 0.9);
+            color: #2c3e50;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            align-self: center;
+            margin-top: auto;
+        }
+
+        .grid-item button:hover {
+            background: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: relative;
+            background: white;
+            margin: 15% auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .modal-body {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #34495e;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .modal-button {
+            background: linear-gradient(145deg, #ff6ec7, #ff9a8b);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modal-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 20px;
+            }
+
+            .grid-container {
+                gap: 20px;
+            }
+
+            .grid-item h2 {
+                font-size: 1.6em;
+            }
+
+            .grid-item img {
+                height: 200px;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .grid-item {
+                min-height: auto;
+            }
+
+            .grid-item img {
+                height: 180px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .grid-item h2 {
+                font-size: 1.5em;
+            }
+
+            .grid-item p {
+                font-size: 1em;
+            }
+
+            .grid-item button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+
+        @media (min-width: 1300px) {
+            .grid-container {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 1299px) {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+            
+            .grid-container {
+                justify-content: flex-start;
+            }
+            
+            .grid-container::after {
+                content: '';
+                flex: 0 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Attention Assessment Tests</h1>
+            <p class="subtitle">Complete each test in sequence to assess different aspects of attention</p>
+        </header>
+        <div class="grid-container">
+            <div class="grid-item" onclick="test1Clicked()">
+                <img src="https://krisp.ai/blog/wp-content/uploads/2024/10/theories-of-selective-attention.webp" alt="Selective Attention">
+                <div class="content">
+                    <h2>Selective Attention</h2>
+                    <p>Test your ability to focus on specific information while filtering out irrelevant stimuli.</p>
+                    <button>Start Test 1</button>
+                </div>
+            </div>
+            <div class="grid-item disabled" data-message="Please start with Test 1 before proceeding." onclick="test2Clicked()">
+                <img src="https://cdn.leonardo.ai/users/19fd34c0-34e9-4afc-a584-f8d1e806ed30/generations/3fa85de1-fd10-416b-ba34-ff359755b36e/Leonardo_Phoenix_10_A_futuristic_hightech_illustration_of_a_st_1.jpg" alt="Selective and Sustained Attention">
+                <div class="content">
+                    <h2>Selective & Sustained Attention</h2>
+                    <p>Evaluate your capacity to maintain focus over an extended period while selecting relevant information.</p>
+                    <button>Start Test 2</button>
+                </div>
+            </div>
+            <div class="grid-item disabled" data-message="Test 3 should only be accessed after Test 2." onclick="test3Clicked()">
+                <img src="https://cdn.leonardo.ai/users/19fd34c0-34e9-4afc-a584-f8d1e806ed30/generations/8357416b-e326-4c48-9b83-975ea4a2a5a0/Leonardo_Phoenix_09_A_highly_detailed_anatomically_accurate_il_2.jpg" alt="Alternate Attention">
+                <div class="content">
+                    <h2>Alternate Attention</h2>
+                    <p>Assess your ability to switch focus between different tasks or information sources.</p>
+                    <button>Start Test 3</button>
+                </div>
+            </div>
+            <div class="grid-item disabled" data-message="You need to finish Test 3 before Test 4." onclick="test4Clicked()">
+                <img src="https://cdn.leonardo.ai/users/19fd34c0-34e9-4afc-a584-f8d1e806ed30/generations/3fa85de1-fd10-416b-ba34-ff359755b36e/Leonardo_Phoenix_10_A_futuristic_hightech_illustration_of_a_st_0.jpg" alt="Divided Attention">
+                <div class="content">
+                    <h2>Divided Attention</h2>
+                    <p>Test your capability to process multiple information sources simultaneously.</p>
+                    <button>Start Test 4</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" id="modalHeader"></div>
+            <p class="modal-body" id="modalBody"></p>
+            <button class="modal-button" id="continueButton">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        let order = 0;
+        const instructionCard = document.getElementById('gameOverModal');
+        const instructionMessage = document.getElementById('modalBody');
+        const redirectLink = document.getElementById('continueButton');
+        const modalHeader = document.getElementById('modalHeader');
+
+        // Update disabled states based on test progress
+        function updateTestStates() {
+            const items = document.querySelectorAll('.grid-item');
+            items.forEach((item, index) => {
+                if (index > order) {
+                    item.classList.add('disabled');
+                } else {
+                    item.classList.remove('disabled');
+                }
+            });
+        }
+
+        function showInstructionCard(title, message, redirectUrl) {
+            modalHeader.textContent = title;
+            instructionCard.style.display = "block";
+            instructionMessage.innerHTML = message;
+            redirectLink.onclick = function() {
+                instructionCard.style.display = "none";
+                if (redirectUrl) {
+                    window.location.href = redirectUrl;
+                }
+            };
+        }
+
+        function test1Clicked() {
+            window.location.href = "trialtest0.html";
+            order = 1;
+            updateTestStates();
+        }
+
+        function test2Clicked() {
+            if (order >= 1) {
+                window.location.href = "trialtest1.html";
+                order = 2;
+                updateTestStates();
+            } else {
+                showInstructionCard(
+                    "Complete Test 1 First",
+                    "You must complete the Selective Attention Test (Test 1) before proceeding to Test 2.<br><br>" +
+                    "Please click the 'Start Test 1' button to begin.",
+                    null
+                );
+            }
+        }
+
+        function test3Clicked() {
+            if (order >= 2) {
+                window.location.href = "trialtest2.html";
+                order = 3;
+                updateTestStates();
+            } else {
+                showInstructionCard(
+                    "Complete Previous Tests",
+                    "You must complete Test 1 and Test 2 before accessing Test 3.<br><br>" +
+                    "Current requirement: " + (order === 0 ? "Complete Test 1" : "Complete Test 2"),
+                    null
+                );
+            }
+        }
+
+        function test4Clicked() {
+            if (order >= 3) {
+                window.location.href = "trialtest3.html";
+                order = 4;
+                updateTestStates();
+            } else {
+                showInstructionCard(
+                    "Complete Previous Tests",
+                    "You must complete Tests 1, 2, and 3 before accessing Test 4.<br><br>" +
+                    "Current requirement: " + 
+                    (order === 0 ? "Complete Test 1" : 
+                     order === 1 ? "Complete Test 2" : "Complete Test 3"),
+                    null
+                );
+            }
+        }
+
+        // Initialize test states
+        document.addEventListener('DOMContentLoaded', updateTestStates);
+    </script>
+</body>
+</html>

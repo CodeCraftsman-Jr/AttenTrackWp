@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details Form</title>
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/045/898/520/large_2x/health-care-and-science-icon-pattern-medical-innovation-concept-background-design-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333; /* Text color for readability */
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.65); /* More opaque semi-transparent white */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+            transition: box-shadow 0.3s;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .container:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            text-align: center;
+            color: #0784eb; /* Color matching the buttons */
+            margin-bottom: 20px;
+            font-size: 24px;
+            border-bottom: 2px solid #0784eb;;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        .required {
+  color: red;
+  margin-left:8px;
+}
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+            background-color: #fdfdfd; /* Lighter background for inputs */
+        }
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border: 1px solid #0784eb;;
+            outline: none;
+            background-color: #e9f5e9; /* Light green focus background */
+        }
+        textarea {
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #0784eb;;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #0784eb;;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.7); /* Fallback color */
+            backdrop-filter: blur(5px); /* Blurred background */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            text-align: center;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Details Form</h2>
+        <form id="patientForm">
+            <div class="form-group">
+                <label for="patientId">Patient ID</label>
+                <input type="text" id="patientId" name="patientId" required readonly>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name<span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name<span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender<span class="required">*</span></label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth<span class="required">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email<span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number<span class="required">*</span></label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Place of Work/Study </label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="insuranceProvider">City & State Where You Live</label>
+                <input type="text" id="insuranceProvider" name="insuranceProvider">
+            </div>
+            <div class="form-group">
+                <label for="insuranceNumber">Nationality</label>
+                <input type="text" id="insuranceNumber" name="insuranceNumber">
+            </div>
+            <div class="form-group">
+                <label for="medicalHistory">Medical History</label>
+                <textarea id="medicalHistory" name="medicalHistory" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="doa">Date Of Assessment</label>
+                <input type="date" id="doa" name="doa" required>
+            </div>
+            <div class="form-group">
+                <label for="emergencyContact">Emergency Contact Name</label>
+                <input type="text" id="emergencyContact" name="emergencyContact">
+            </div>
+            <div class="form-group">
+                <label for="emergencyPhone">Emergency Contact Phone</label>
+                <input type="text" id="emergencyPhone" name="emergencyPhone">
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Submission Successful!</h2>
+            <p>Your patient details have been submitted successfully.</p>
+            <button class="submit-btn" id="nextTestButton">Click Here to Attend Test </button>
+        </div>
+    </div>
+
+    <script>
+        async function fetchUniqueTestID() { 
+            try {
+                const response = await fetch('store_test_id.php', {
+                    method: 'POST'
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                const testID = data.test_id;
+
+                document.getElementById('patientId').value = testID; // Automatically set Patient ID
+            } catch (error) {
+                console.error('Error fetching test ID:', error);
+            }
+        }
+
+        // Call the function to fetch the unique test ID when the page loads
+        window.onload = fetchUniqueTestID;
+
+        // Handle form submission
+        document.getElementById("patientForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = new FormData();
+            formData.append('entry.1946159259', document.getElementById('patientId').value); // Patient ID
+            formData.append('entry.548217985', document.getElementById('firstName').value); // First Name
+            formData.append('entry.1939270885', document.getElementById('lastName').value); // Last Name
+            formData.append('entry.878875172', document.getElementById('gender').value); // Gender
+            formData.append('entry.1758619677', document.getElementById('dob').value); // Date of Birth
+            formData.append('entry.1517301426', document.getElementById('email').value); // Email
+            formData.append('entry.548618689', document.getElementById('phone').value); // Phone Number
+            formData.append('entry.1579138427', document.getElementById('address').value); // Address
+            formData.append('entry.1335083885', document.getElementById('insuranceProvider').value); // Insurance Provider
+            formData.append('entry.188307504', document.getElementById('insuranceNumber').value); // Insurance Policy Number
+            formData.append('entry.168848015', document.getElementById('medicalHistory').value); // Medical History
+            formData.append('entry.1119384749', document.getElementById('doa').value); // Allergies
+            formData.append('entry.1386633277', document.getElementById('emergencyContact').value); // Emergency Contact Name
+            formData.append('entry.31925688', document.getElementById('emergencyPhone').value); // Emergency Contact Phone
+
+            fetch('https://docs.google.com/forms/d/e/1FAIpQLSfiHC5o2YLQLpZrAiMlSlW953aRIvqTCU7lblvNrRd4GADesg/formResponse', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Important: Allows cross-origin requests
+            })
+            .then(response => {
+                // Show the success modal
+                const modal = document.getElementById("successModal");
+                modal.style.display = "block";
+                this.reset(); // Reset the form after submission
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                alert("There was an error submitting the patient details.");
+            });
+        });
+
+        // Close the modal
+        document.querySelector('.close').onclick = function() {
+            const modal = document.getElementById("successModal");
+            modal.style.display = "none";
+        };
+
+        // Handle the next test button click
+        document.getElementById("nextTestButton").onclick = function() {
+            window.location.href = "selectionpage2.html"; // Redirect to the next test page
+        };
+
+        // Close the modal when clicking anywhere outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("successModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

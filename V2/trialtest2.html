@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Test</title>
+    <style>
+        /* Base Styles */
+        body {
+            /* background: url('https://static.vecteezy.com/system/resources/previews/003/207/478/non_2x/medical-concept-abstract-technology-concept-background-vector.jpg'); */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        #test-id {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.2em;
+            color: #00e6e6;
+            background-color: rgba(30, 30, 30, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-top: 20px;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 40px;
+            width: 100%;
+            max-width: 2000px;
+            height: 450px;
+            /* background-color: #2e2e2e27; */
+            border-radius: 12px;
+            /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04); */
+        }
+
+        .left-section {
+            width: 50%;
+        }
+
+        .alphabet-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .alphabet-grid div {
+            background-color: #f0f0f0;
+            color: #333;
+            font-size: 1.5em;
+            margin: 10px;
+            padding: 20px;
+            width: 20px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 55%;
+        }
+
+        .timer {
+            font-size: 4em;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #000000;
+        }
+
+        .current-number {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            font-size: 1.5em;
+            padding: 15px;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            background-color: #333;
+            color: #f0f0f0;
+            outline: none;
+        }
+
+        input[type="text"]::placeholder {
+            color: #888;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #40E0D0;
+            color: black;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00b3b3;
+            transform: scale(1.05);
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            min-width: 150px;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .welcome-screen {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .demo-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        #realTimeLog {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1em;
+            color: #00e6e6;
+            background-color: rgba(30, 30, 30, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-indicator">DEMO MODE</div>
+    <div class="welcome-screen" id="welcomeScreen">
+        <h1>Attention Testing - Demo Version</h1>
+        <p>This is a 30-second demo version of the attention test.</p>
+        <button onclick="startDemo()" class="start-button">Start Demo Test</button>
+        <button onclick="window.location.href='test2.html';" class="start-button">Start Test</button>
+        <button onclick="window.location.href='instructiontest2.html';" class="start-button">Instructions</button>
+
+    </div>
+    <div id="testContent" class="hidden">
+        <div>
+            <h1>Attention Testing</h1>
+            <div id="test-id" hidden></div>
+            <div class="container">
+                <div class="left-section">
+                    <div class="alphabet-grid">
+                        <div>A<br>1</div>
+                        <div>B<br>2</div>
+                        <div>C<br>3</div>
+                        <div>D<br>4</div>
+                        <div>E<br>5</div>
+                        <div>F<br>6</div>
+                        <div>G<br>7</div>
+                        <div>H<br>8</div>
+                        <div>I<br>9</div>
+                        <div>J<br>10</div>
+                        <div>K<br>11</div>
+                        <div>L<br>12</div>
+                        <div>M<br>13</div>
+                        <div>N<br>14</div>
+                        <div>O<br>15</div>
+                        <div>P<br>16</div>
+                        <div>Q<br>17</div>
+                        <div>R<br>18</div>
+                        <div>S<br>19</div>
+                        <div>T<br>20</div>
+                        <div>U<br>21</div>
+                        <div>V<br>22</div>
+                        <div>W<br>23</div>
+                        <div>X<br>24</div>
+                        <div>Y<br>25</div>
+                        <div>Z<br>26</div>
+                    </div>
+                </div>
+                <div id="realTimeLog" hidden>
+                <strong>Test Log</strong><br>
+                Attempts: <span id="attemptsCount">0</span><br>
+                Correct Answers: <span id="correctCount">0</span><br>
+                Wrong Answers: <span id="wrongCount">0</span>
+            </div>
+                <div class="right-section">
+                    <div class="timer" id="timer">00:10</div>
+                    <div class="current-number" id="currentNumber">Watch here Carefully</div>
+                    <!-- <input type="text" id="inputField" placeholder="Enter Here." maxlength="1"> -->
+                    <input type="text" id="inputField"  maxlength="1">
+                    <button onclick="startTest()">Start Test</button>
+                    <button class="hidden" id="submitBtn" onclick="submitResults()">Submit Results</button>
+                    <button class="hidden" id="goToTest3Btn" onclick="window.location.href='test2.html'">Go to Next Test</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 10;
+        let timer;
+        let correctAnswers = 0;
+        let wrongAnswers = 0;
+        let attempts = 0;
+        const totalRounds = 50;
+        let currentRandomNumber;
+        let testID;
+        let isDemoMode = true;
+        const DEMO_TIME = 30; // 30 seconds for demo
+        const alphabetMap = {
+            1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E', 6: 'F', 7: 'G', 8: 'H', 9: 'I',
+            10: 'J', 11: 'K', 12: 'L', 13: 'M', 14: 'N', 15: 'O', 16: 'P', 17: 'Q',
+            18: 'R', 19: 'S', 20: 'T', 21: 'U', 22: 'V', 23: 'W', 24: 'X', 25: 'Y', 26: 'Z'
+        };
+
+        async function fetchUniqueTestID() {
+            return fetch('store_test_id.php', {
+                method: 'GET'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.test_id) {
+                    testID = data.test_id;
+                    document.getElementById('test-id').innerText = testID;
+                } else {
+                    console.warn("No test ID found.");
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching test ID:', error);
+            });
+        }
+
+        function updateLog() {
+            document.getElementById('attemptsCount').textContent = attempts;
+            document.getElementById('correctCount').textContent = correctAnswers;
+            document.getElementById('wrongCount').textContent = wrongAnswers;
+        }
+
+        function nextRound() {
+            if (attempts < totalRounds) {
+                attempts++;
+                updateLog();
+                currentRandomNumber = Math.floor(Math.random() * 26) + 1;
+                document.getElementById('currentNumber').textContent = currentRandomNumber;
+                document.getElementById('inputField').value = '';
+                document.getElementById('inputField').focus();
+                startTimer();
+            } else {
+                document.getElementById('submitBtn').classList.remove('hidden');
+            }
+        }
+
+        function startTest() {
+            if (isDemoMode) {
+                timeLeft = DEMO_TIME;
+            }
+            correctAnswers = 0;
+            wrongAnswers = 0;
+            attempts = 0; 
+            updateLog();
+            nextRound();
+        }
+
+        function startTimer() {
+            document.getElementById('timer').textContent = "00:" + (timeLeft < 10 ? "0" + timeLeft : timeLeft);
+            timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timer').textContent = "00:" + (timeLeft < 10 ? "0" + timeLeft : timeLeft);
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('inputField').disabled = true;
+                    document.getElementById('currentNumber').textContent = "Demo Complete!";
+                    
+                    // Create and show navigation buttons with improved styling
+                    const buttonsContainer = document.createElement('div');
+                    buttonsContainer.className = 'nav-buttons';
+                    buttonsContainer.innerHTML = `
+                        <button onclick="window.location.href='test2.html'">Try Full Test</button>
+                        <button onclick="window.location.href='selectionpage2.html'">Go to Next Test</button>
+                    `;
+                    document.getElementById('currentNumber').after(buttonsContainer);
+                }
+            }, 1000);
+        }
+
+        function startDemo() {
+            document.getElementById('welcomeScreen').classList.add('hidden');
+            document.getElementById('testContent').classList.remove('hidden');
+            startTest();
+        }
+
+        document.getElementById('inputField').addEventListener('input', function (e) {
+            clearInterval(timer);
+            const userAnswer = e.target.value.toUpperCase();
+            const correctAnswer = alphabetMap[currentRandomNumber];
+
+            if (userAnswer === correctAnswer) {
+                correctAnswers++;
+            } else {
+                wrongAnswers++;
+            }
+            updateLog();
+            nextRound();
+            startTimer();
+        });
+
+    </script>
+</body>
+</html>

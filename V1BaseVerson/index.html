@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AttenTrack</title>
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Add FontAwesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #84cbd4;
+            --secondary-color: #2c455d;
+            --accent-color: #c1ffe1;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Enhanced Navigation */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 5px 0;
+        }
+
+        .home-mov {
+            padding-left: 25%;
+        }
+
+        .home-pad {
+            padding-right: 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .home-pad:hover {
+            color: var(--primary-color);
+        }
+
+        /* Enhanced Login Button */
+        .log-but {
+            border: 2px solid var(--primary-color);
+            background-color: transparent;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .log-but:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(132, 203, 212, 0.3);
+        }
+
+        /* Enhanced Hero Section */
+        .overlay-container {
+            height: 85vh;
+            background: linear-gradient(
+                135deg,
+                rgba(44,69,93,0.85),
+                rgba(0,1,44,0.85)
+            ),
+            url('http://assessingattention.great-site.net/images/one.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wel2-text {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .wel-text {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: titleFadeIn 1.5s ease-out;
+        }
+
+        @keyframes titleFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .wel2-text h3 {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: quoteSlideUp 0.6s ease-out forwards;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .wel2-text h3:nth-child(1) { animation-delay: 0.3s; }
+        .wel2-text h3:nth-child(2) { animation-delay: 0.6s; }
+        .wel2-text h3:nth-child(3) { animation-delay: 0.9s; }
+        .wel2-text h3:nth-child(4) { animation-delay: 1.2s; }
+        .wel2-text h3:nth-child(5) { animation-delay: 1.5s; }
+
+        @keyframes quoteSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced Button Styling */
+        .btn {
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            background: var(--primary-color);
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(132, 203, 212, 0.4);
+        }
+
+        /* Enhanced Section Styling */
+        .sec-2 {
+            margin-top: 100px;
+            padding: 60px 0;
+            background-color: var(--light-bg);
+        }
+
+        .sec-text {
+            font-size: 1.2rem;
+            margin-top: 25px;
+            word-spacing: 0.2em;
+            line-height: 1.8em;
+            color: #555;
+        }
+
+        /* Enhanced Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat h3 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Enhanced Footer */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        /* Enhanced Top Header */
+        .top-header {
+            background: var(--secondary-color);
+            color: #fff;
+            padding: 0.8rem 0;
+            font-size: 0.95rem;
+        }
+
+        .top-header .contact-info p {
+            display: inline-block;
+            margin-right: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .top-header .contact-info p:hover {
+            color: var(--primary-color);
+        }
+
+        .top-header .contact-info i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .wel-text {
+                font-size: 2.5rem;
+            }
+            .home-mov {
+                padding-left: 0;
+            }
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .stat {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- bootstrap Navbar  -->
+    <!-- Updated Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary " style="margin: -5px;">
+        <div class="container-fluid">
+            <img src="https://i.postimg.cc/7L920NfP/Whats-App-Image-2024-11-06-at-21-01-20-88f53cb4.jpg" width="85px" alt="Logo">
+            <a class="navbar-brand logo" href="#" style="font-size: 38px;">AttenTrack</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="margin-right: 5px;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active textnav" aria-current="page"  style="padding: 10px;" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link textnav" style="padding: 10px;" href="./about_app.html">About-app</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link textnav" style="padding: 10px;" href="https://svcet.ac.in/">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link textnav" style="padding: 12px;" href="./contactus.html">Contact us</a>
+                    </li>
+                </ul>
+                <a class="btn btn-primary textnav"  style="padding: 10px;" href="./signin.html">SignIn</a>
+               
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section>
+        <div>
+            <div class="overlay-container">
+                <img class="wel-se" style="width: 100%; height: auto;">
+                <div class="wel2-text text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; z-index: 2;">
+                    <h1 class="wel-text wel-font" style="font-family: 'Josefin Sans', sans-serif; font-size: 40px; font-weight: 600; margin-bottom: 20px;">
+                        Know Your Attention Level!
+                    </h1>
+                    <div style="margin-top: 20px; line-height: 1.8em; word-spacing: 0.1em; color: rgb(255, 255, 255);">
+                        <h3>- "Strength doesn’t come from what you can do, it comes from overcoming the things you once thought you couldn’t."</h3>
+                        <h3>- "Focus on progress, not perfection!"</h3>
+                        <h3>- "Small steps lead to big leaps."</h3>
+                        <h3>- "You’re not lazy—you just think differently!"</h3>
+                        <h3>- "Celebrate every small win—it’s all progress!"</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+            
+    <!-- Updated About Section -->
+    <section class="about-section">
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <img src="https://i.postimg.cc/L8XKm9Ly/download.png" class="img-fluid" alt="About Us Image" style="margin-top: 25px;">
+                </div>
+                <div class="col-lg-6 col-md-12" >
+                    <h2 class="mt-4">ABOUT US</h2>
+                    <p class="sec-text mt-4 ">
+                        "Our medical website is dedicated to providing comprehensive healthcare solutions for both doctors and patients.
+                        We focus on delivering personalized care through advanced technology, expert medical professionals, and a user-friendly platform."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> All rights reserved to AttenTrack</p> 
+        </div>
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="container">
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> +123-456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@dentocare.com</p>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- bootstrap -->
+    <!-- Bootstrap JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+    <!-- Your Inline JavaScript -->
+    <script>
+        // Get the current year and set it to the span with id "year"
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

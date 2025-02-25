@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Administrator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background: url('https://static.vecteezy.com/system/resources/previews/006/712/955/non_2x/abstract-health-medical-science-consist-doctor-digital-wireframe-concept-modern-medical-technology-treatment-medicine-on-gray-background-for-template-web-design-or-presentation-vector.jpg');
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.30);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: #ffffff;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Administrator</h1>
+        <p>Please fill out the form below to request access.</p>
+        <form id="AdminAccess" onsubmit="submitResultsToGoogleForm(event);">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" name="entry.496902211" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="entry.1021848774" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message (Include your id and pass Here)</label>
+                <textarea class="form-control" id="message" name="entry.1021807843" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Request</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybVsY6H5QX4dD+dY6qJkR1RzM7l9cP2sA0QAk1QxNTXvRSV7I" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-NEyV1jF7DgUGBd1ULqj8Us8D7qAZt5qZMBEtl5vbE5EzxlgvMDhw+eRCCZjJj/Nw" crossorigin="anonymous"></script>
+    
+    <script>
+        function submitResultsToGoogleForm(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Gather form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Prepare data to send to Google Forms
+            const formURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeSinJoaNcd0YovRr62GmQVtRj2ewytCNJLbKKh_OjCtcu0KA/formResponse'; // Google Form URL
+            const data = {
+                'entry.496902211': name, // Full Name
+                'entry.1021848774': email, // Email Address
+                'entry.1021807843': message // Message
+            };
+            const params = new URLSearchParams(data).toString();
+
+            // Send data using fetch
+            fetch(formURL, {
+                method: 'POST',
+                body: params,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    console.log('Results submitted successfully');
+                    alert("Submitted Successfully");
+                    // Redirect after successful submission
+                    setTimeout(function() {
+                        window.location.href = "index.html"; // Replace with your redirect page
+                    }, 2000); // Redirect after 2 seconds
+                } else {
+                    console.error('Error submitting results:', response.statusText);
+                    alert('Error submitting form. Please try again later.');
+                }
+            }).catch(error => {
+                console.error('Fetch error:', error);
+                alert('Contact Admin For More Details ');
+                // Redirect after successful submission
+                    setTimeout(function() {
+                        window.location.href = "index.html"; // Replace with your redirect page
+                    }, 200); // Redirect after 2 seconds
+            });
+        }
+    </script>
+</body>
+
+</html>

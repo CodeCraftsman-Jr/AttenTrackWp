@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        h2 {
+            margin-top: 40px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .buttontwo {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #8113db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results</h1>
+       <table>
+        <thead>
+            <tr>
+                <th>Test Identifier</th>
+                <th>P Count</th>
+                <th>Total Count</th>
+                <th>Correct Count</th>
+                <th>Incorrect Count</th>
+                <th>Missed Count</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody">
+            <!-- Results will be populated here -->
+        </tbody>
+    </table>
+    <p> </p>
+    <button id="calculateButton">Calculate Totals</button>
+    <h2>Calculated Totals</h2>
+    <table id="totalsTable" border="1" style="width:100%; text-align: center;">
+        <thead>
+            <tr>
+                <th>Total</th>
+                <th>P Count</th>
+                <th>Total Count</th>
+                <th>Correct Count</th>
+                <th>Incorrect Count</th>
+                <th>Missed Count</th>
+            </tr>
+        </thead>
+        <tbody id="totalsBody">
+            <!-- Calculated totals will be populated here -->
+        </tbody>
+    </table>
+    <button id="calculateButton2" class="buttontwo">Continue</button>
+
+    
+    <script>
+        document.getElementById('calculateButton2').addEventListener('click', function() {
+            window.location.href = 'selectionpage2.html';
+        });
+        function displayResults() {
+            const results1 = JSON.parse(localStorage.getItem('test1Results'));
+            if (results1) {
+                const tbody = document.getElementById('resultsBody');
+                const row1 = document.createElement('tr');
+                row1.innerHTML = `
+                    <td>${results1.test}</td>
+                    <td>${results1.pCounttest1}</td>
+                    <td>${results1.totalCounttest1}</td>
+                    <td>${results1.correctCounttest1}</td>
+                    <td>${results1.incorrectCounttest1}</td>
+                    <td>${results1.missedCounttest1}</td>
+                `;
+                tbody.appendChild(row1);
+            } else {
+                alert('No results found for Test 1 in local storage.');
+            }
+
+            const results2 = JSON.parse(localStorage.getItem('test2Results'));
+            if (results2) {
+                const tbody = document.getElementById('resultsBody');
+                const row2 = document.createElement('tr');
+                row2.innerHTML = `
+                    <td>${results2.test}</td>
+                    <td>${results2.pCounttest2}</td>
+                    <td>${results2.totalCounttest2}</td>
+                    <td>${results2.correctCounttest2}</td>
+                    <td>${results2.incorrectCounttest2}</td>
+                    <td>${results2.missedCounttest2}</td>
+                `;
+                tbody.appendChild(row2);
+            } else {
+                alert('No results found for Test 2 in local storage.');
+            }
+            const results3 = JSON.parse(localStorage.getItem('test3Results'));
+            if (results3) {
+                const tbody = document.getElementById('resultsBody');
+                const row3 = document.createElement('tr');
+                row3.innerHTML = `
+                    <td>${results3.test}</td>
+                    <td>${results3.pCounttest3}</td>
+                    <td>${results3.totalCounttest3}</td>
+                    <td>${results3.correctCounttest3}</td>
+                    <td>${results3.incorrectCounttest3}</td>
+                    <td>${results3.missedCounttest3}</td>
+                `;
+                tbody.appendChild(row3);
+            } else {
+                alert('No results found for Test 3 in local storage.');
+            }
+            const results4 = JSON.parse(localStorage.getItem('test4Results'));
+            if (results4) {
+                const tbody = document.getElementById('resultsBody');
+                const row4 = document.createElement('tr');
+                row4.innerHTML = `
+                    <td>${results4.test}</td>
+                    <td>${results4.pCounttest4}</td>
+                    <td>${results4.totalCounttest4}</td>
+                    <td>${results4.correctCounttest4}</td>
+                    <td>${results4.incorrectCounttest4}</td>
+                    <td>${results4.missedCounttest4}</td>
+                `;
+                tbody.appendChild(row4);
+            } else {
+                alert('No results found for Test 4 in local storage.');
+            }
+        }
+
+        function calculateTotals() {
+            const results1 = JSON.parse(localStorage.getItem('test1Results')) || {};
+            const results2 = JSON.parse(localStorage.getItem('test2Results')) || {};
+            const results3 = JSON.parse(localStorage.getItem('test3Results')) || {};
+            const results4 = JSON.parse(localStorage.getItem('test4Results')) || {};
+
+            const totalPCount = (results1.pCounttest1 || 0) + (results2.pCounttest2 || 0) + (results3.pCounttest3 || 0) + (results4.pCounttest4 || 0);
+            const totalCount = (results1.totalCounttest1 || 0) + (results2.totalCounttest2 || 0) + (results3.totalCounttest3 || 0) + (results4.totalCounttest4 || 0);
+            const totalCorrect = (results1.correctCounttest1 || 0) + (results2.correctCounttest2 || 0) + (results3.correctCounttest3 || 0) + (results4.correctCounttest4 || 0);
+            const totalIncorrect = (results1.incorrectCounttest1 || 0) + (results2.incorrectCounttest2 || 0) + (results3.incorrectCounttest3 || 0) + (results4.incorrectCounttest4 || 0);
+            const totalMissed = (results1.missedCounttest1 || 0) + (results2.missedCounttest2 || 0) + (results3.missedCounttest3 || 0) + (results4.missedCounttest4 || 0);
+
+            const tbody = document.getElementById('totalsBody');
+            tbody.innerHTML = ''; // Clear previous totals
+            const totalRow = document.createElement('tr');
+            totalRow.innerHTML = `
+                <td>Total</td>
+                <td>${totalPCount}</td>
+                <td>${totalCount}</td>
+                <td>${totalCorrect}</td>
+                <td>${totalIncorrect}</td>
+                <td>${totalMissed}</td>
+            `;
+            tbody.appendChild(totalRow);
+        }
+
+        window.onload = displayResults;
+        document.getElementById('calculateButton').addEventListener('click', calculateTotals);
+    </script>
+</body>
+</html>

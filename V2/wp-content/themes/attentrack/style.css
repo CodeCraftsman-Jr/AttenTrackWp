@@ -1,0 +1,27 @@
+/*
+Theme Name: AttenTrack
+Theme URI: http://attentrack.com
+Author: AttenTrack Team
+Author URI: http://attentrack.com
+Description: A custom WordPress theme for the AttenTrack attention assessment platform
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: attentrack
+*/
+
+/* Import existing styles */
+:root {
+    --primary-color: #84cbd4;
+    --secondary-color: #2c455d;
+    --accent-color: #c1ffe1;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    color: var(--text-color);
+}

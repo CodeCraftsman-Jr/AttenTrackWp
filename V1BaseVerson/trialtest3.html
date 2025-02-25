@@ -1,0 +1,404 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divided Attention Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        #grid {
+            width: 100%;
+            max-width: 1800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .color-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 15px;
+            padding: 15px;
+            height: 300px;
+        }
+
+        .color-box {
+            flex: 1;
+            height: 100%;
+            min-width: 0;
+            border: 4px solid black;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(20px, 3vw, 32px);
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 5px;
+        }
+
+        .color-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 600px) {
+            .color-box {
+                font-size: 14px;
+                padding: 5px;
+            }
+            body {
+                padding: 10px;
+            }
+        }
+
+        .demo-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            z-index: 100;
+        }
+        .welcome-screen {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .hidden {
+            display: none !important;
+        }
+        #timer {
+            display: none;
+            font-size: 48px;
+            margin: 20px 0;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        #userLog {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        button {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 15px 30px;
+            margin: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        button:active {
+            transform: translateY(1px);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-indicator">DEMO MODE</div>
+    <div class="welcome-screen" id="welcomeScreen">
+        <h1>Color Click Test - Demo Version</h1>
+        <p>This is a 30-second demo version of the color click test.</p>
+        <button onclick="startDemo()">Start Demo Test</button>
+        <button onclick="window.location.href='test3.html';" class="start-button">Start Test</button>
+        <button onclick="window.location.href='instructiontest3.html';" class="start-button">Instructions</button>
+    </div>
+
+    <div id="mainContent" class="hidden">
+        <div id="userLog" hidden>User ID: <span id="test-id">Loading...</span></div>
+        <h1 style="color: aliceblue; font-size: 40px;color:black">Color Click Test</h1>
+
+        <button style="margin-left:650px" id="startButton" class="hidden">Start Test</button>
+
+        <div id="grid">
+            <h1 style="color: #2c3e50; font-size: 40px;">Divided Attention Test</h1>
+            <div class="color-container">
+                <div id="green" class="color-box" style="background-color: green;">Green</div>
+                <div id="red" class="color-box" style="background-color: red;">Red</div>
+                <div id="yellow" class="color-box" style="background-color: yellow;">Yellow</div>
+                <div id="violet" class="color-box" style="background-color: violet;">Violet</div>
+                <div id="blue" class="color-box" style="background-color: blue;">Blue</div>
+                <div id="orange" class="color-box" style="background-color: orange;">Orange</div>
+            </div>
+            <div id="timer">Time left: 60s</div>
+        </div>
+
+        <div>
+            <p></p>
+            
+
+            <div id="popup">
+                <h2>Test Results</h2>
+                <table border="1" style="margin: 0 auto;">
+                    <tr>
+                        <th>Correct</th>
+                        <th>Incorrect</th>
+                    </tr>
+                    <tr>
+                        <td id="correctCount">0</td>
+                        <td id="incorrectCount">0</td>
+                    </tr>
+                </table>
+                <br><br>
+                <button onclick="submitResults()">Submit Results</button>
+                <button onclick="window.location.href = 'index.html';">Go to Home Page</button>
+                <button onclick="window.location.href = 'Home2.html';">Next Test</button>
+            </div>
+            
+            <!-- Audio elements for each color -->
+            <audio id="greenSound" preload="auto">
+                <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="redSound" preload="auto">
+                <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="yellowSound" preload="auto">
+                <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="violetSound" preload="auto">
+                <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="blueSound" preload="auto">
+                <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="orangeSound" preload="auto">
+                <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+            </audio>
+            <div class="loading" id="loading">Loading...</div>
+        </div>
+
+        <script>
+            const colors = ['green', 'red', 'yellow', 'violet', 'blue', 'orange'];
+            let scoreCorrect = 0;
+            let scoreIncorrect = 0;
+            const maxInputs = 30;  // Maximum inputs limit
+            let totalTime = 30; 
+            let timerInterval;
+            let currentColor;
+            let gameStarted = false;
+            let voiceInterval;
+            let colorShuffleInterval;
+            let synth = window.speechSynthesis;
+            let colorDisplayInterval;
+            let colorDisplayTime = 3000; 
+            let isDemoMode = true;
+
+            const startButton = document.getElementById('startButton');
+            const grid = document.getElementById('grid');
+            const popup = document.getElementById('popup');
+            const timer = document.getElementById('timer');
+            const correctCount = document.getElementById('correctCount');
+            const incorrectCount = document.getElementById('incorrectCount');
+            const clickSound = document.getElementById('clickSound');
+
+            function startDemo() {
+                document.getElementById('welcomeScreen').classList.add('hidden');
+                document.getElementById('mainContent').classList.remove('hidden');
+                document.body.style.background = 'white';
+                timer.style.color = 'black';
+                document.querySelector('h1').style.color = 'black';
+                grid.style.display = 'grid';
+                startGame();
+            }
+
+            // Start game when the button is pressed
+            startButton.addEventListener('click', () => {
+                startButton.style.display = 'none';
+                grid.style.display = 'grid';
+                document.body.style.background = 'white';
+                timer.style.color = 'black';
+                document.querySelector('h1').style.color = 'black';
+                startGame();
+            });
+
+            function startGame() {
+                gameStarted = true;
+                totalTime = isDemoMode ? 30 : 60; 
+
+                // Start timer
+                timerInterval = setInterval(() => {
+                    totalTime--;
+                    timer.innerText = `Time left: ${totalTime}s`;
+                    if (totalTime === 0) {
+                        clearInterval(timerInterval);
+                        endGame();
+                    }
+                }, 1000);
+
+                // Initial color display and audio
+                shuffleColors();
+                playRandomColor();
+
+                // Start intervals for subsequent changes
+                colorShuffleInterval = setInterval(() => {
+                    shuffleColors();
+                    playRandomColor();
+                }, colorDisplayTime);
+            }
+
+            function playRandomColor() {
+                let newColor;
+                do {
+                    newColor = colors[Math.floor(Math.random() * colors.length)];
+                } while (newColor === currentColor);
+
+                currentColor = newColor;
+                
+                // Play both sound and speech
+                const colorSound = document.getElementById(currentColor + 'Sound');
+                if (colorSound) {
+                    colorSound.currentTime = 0;
+                    colorSound.play();
+                }
+                
+                const utterance = new SpeechSynthesisUtterance(currentColor);
+                utterance.rate = 1;
+                synth.speak(utterance);
+            }
+
+            function shuffleColors() {
+                const shuffledColors = colors.sort(() => Math.random() - 0.5);
+                const colorBoxes = document.querySelectorAll('.color-box');
+                colorBoxes.forEach((box, index) => {
+                    box.style.backgroundColor = shuffledColors[index];
+                    box.innerText = shuffledColors[index].charAt(0).toUpperCase() + shuffledColors[index].slice(1);
+                    box.id = shuffledColors[index];
+                });
+            }
+
+            document.querySelectorAll('.color-box').forEach(box => {
+                box.addEventListener('click', (e) => {
+                    if (!gameStarted) return;
+
+                    const clickedColor = e.target.id;
+                    const colorSound = document.getElementById(clickedColor + 'Sound');
+                    
+                    // Add clicked animation
+                    e.target.classList.add('clicked');
+                    setTimeout(() => e.target.classList.remove('clicked'), 200);
+
+                    // Play click sound
+                    if (colorSound) {
+                        colorSound.currentTime = 0;
+                        colorSound.play();
+                    }
+
+                    if (clickedColor === currentColor) {
+                        scoreCorrect++;
+                    } else {
+                        scoreIncorrect++;
+                    }
+
+                    // End game if maximum inputs reached
+                    if (scoreCorrect + scoreIncorrect >= maxInputs) {
+                        endGame();
+                    }
+                });
+            });
+
+            function endGame() {
+                gameStarted = false;
+                clearInterval(timerInterval);
+                clearInterval(colorShuffleInterval);
+                
+                if (isDemoMode) {
+                    popup.style.display = 'block';
+                    popup.innerHTML = `
+                        <h2>Demo Complete!</h2>
+                        <p>You got ${scoreCorrect} correct and ${scoreIncorrect} incorrect answers.</p>
+                        <button onclick="window.location.href='test3.html'" style="margin: 10px;">Try Full Test</button>
+                        `;
+                } else {
+                    popup.style.display = 'block';
+                }
+            }
+
+            async function fetchUniqueTestID() {
+                try {
+                    const response = await fetch('store_test_id.php'); 
+                    const data = await response.json();
+                    testID = data.test_id; 
+                    document.getElementById('test-id').innerText = testID;
+                } catch (error) {
+                    console.error('Error fetching test ID:', error);
+                    document.getElementById('test-id').innerText = 'Error loading ID';
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divided Attention Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .color-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: nowrap;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .color-box {
+            height: 425px;
+            width: 300px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .color-box:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .clicked {
+            transform: scale(0.95);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        #timer {
+            display: none;
+            font-size: 48px;
+            margin: 20px 0;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        #userLog {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        button {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 15px 30px;
+            margin: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        button:active {
+            transform: translateY(1px);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="userLog" hidden>User ID: <span id="test-id">Loading...</span></div>
+    
+
+    <div id="grid">
+        <h1 style="color: #2c3e50; font-size: 40px;">Divided Attention Test</h1>
+        <button id="startButton">Start Test</button>
+        <div class="color-container">
+            <div id="green" class="color-box" style="background-color: green;">Green</div>
+            <div id="red" class="color-box" style="background-color: red;">Red</div>
+            <div id="yellow" class="color-box" style="background-color: yellow;">Yellow</div>
+            <div id="violet" class="color-box" style="background-color: violet;">Violet</div>
+            <div id="blue" class="color-box" style="background-color: blue;">Blue</div>
+            <div id="orange" class="color-box" style="background-color: orange;">Orange</div>
+        </div>
+        <div id="timer">Time left: 60s</div>
+    </div>
+
+    <div>
+        <p></p>
+        
+
+        <div id="popup">
+            <h2>Test Results</h2>
+            <table border="1" style="margin: 0 auto;">
+                <tr>
+                    <th>Correct</th>
+                    <th>Incorrect</th>
+                </tr>
+                <tr>
+                    <td id="correctCount">0</td>
+                    <td id="incorrectCount">0</td>
+                </tr>
+            </table>
+            <br><br>
+            <button onclick="submitResults()">Submit Results</button>
+            <button onclick="window.location.href = 'index.html';">Go to Home Page</button>
+            <button onclick="window.location.href = 'Home2.html';">Next Test</button>
+        </div>
+        
+        <!-- Audio elements for each color -->
+        <audio id="greenSound" preload="auto">
+            <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="redSound" preload="auto">
+            <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="yellowSound" preload="auto">
+            <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="violetSound" preload="auto">
+            <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="blueSound" preload="auto">
+            <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="orangeSound" preload="auto">
+            <source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg">
+        </audio>
+        <div class="loading" id="loading">Loading...</div>
+    </div>
+
+    <script>
+        const colors = ['green', 'red', 'yellow', 'violet', 'blue', 'orange'];
+        let scoreCorrect = 0;
+        let scoreIncorrect = 0;
+        const maxInputs = 30;  // Maximum inputs limit
+        let totalTime = 60;
+        let timerInterval;
+        let currentColor;
+        let gameStarted = false;
+        let voiceInterval;
+        let colorShuffleInterval;
+        let synth = window.speechSynthesis;
+        let colorDisplayInterval;
+        let colorDisplayTime = 3000; // Time in milliseconds (3 seconds) for color display interval
+
+        const startButton = document.getElementById('startButton');
+        const grid = document.getElementById('grid');
+        const popup = document.getElementById('popup');
+        const timer = document.getElementById('timer');
+        const correctCount = document.getElementById('correctCount');
+        const incorrectCount = document.getElementById('incorrectCount');
+
+        // Start game when the button is pressed
+        startButton.addEventListener('click', () => {
+            startButton.style.display = 'none';  
+            document.getElementById('timer').style.display = 'block';  // Show timer when game starts
+            timer.style.color = 'black';
+            document.querySelector('h1').style.color = 'black';
+            startGame();
+        });
+
+        function startGame() {
+            gameStarted = true;
+
+            // Start timer
+            timerInterval = setInterval(() => {
+                totalTime--;
+                timer.innerText = `Time left: ${totalTime}s`;
+                if (totalTime === 0) {
+                    clearInterval(timerInterval);
+                    endGame();
+                }
+            }, 1000);
+
+            // Start color shuffling and voice-over intervals
+            colorShuffleInterval = setInterval(shuffleColors, colorDisplayTime);
+
+            // Play random color and shuffle after every color
+            voiceInterval = setInterval(playRandomColor, colorDisplayTime);
+        }
+
+        function shuffleColors() {
+            const shuffledColors = colors.sort(() => Math.random() - 0.5);
+            const colorBoxes = document.querySelectorAll('.color-box');
+            colorBoxes.forEach((box, index) => {
+                box.style.backgroundColor = shuffledColors[index];
+                box.innerText = shuffledColors[index].charAt(0).toUpperCase() + shuffledColors[index].slice(1); // Change text to match color
+                box.id = shuffledColors[index]; 
+            });
+        }
+
+        function playRandomColor() {
+            let newColor;
+            do {
+                newColor = colors[Math.floor(Math.random() * colors.length)];
+            } while (newColor === currentColor); // Ensure it's not the same as the last played color
+
+            currentColor = newColor;
+            
+            // Play both sound and speech simultaneously
+            const colorSound = document.getElementById(currentColor + 'Sound');
+            if (colorSound) {
+                colorSound.currentTime = 0;
+                colorSound.play();
+            }
+            
+            // Speak the color name
+            const utterance = new SpeechSynthesisUtterance(currentColor);
+            utterance.rate = 1;
+            synth.speak(utterance);
+        }
+
+        document.querySelectorAll('.color-box').forEach(box => {
+            box.addEventListener('click', (e) => {
+                if (!gameStarted) return;
+
+                const clickedColor = e.target.id;
+                const colorSound = document.getElementById(clickedColor + 'Sound');
+                
+                // Add clicked animation
+                e.target.classList.add('clicked');
+                setTimeout(() => e.target.classList.remove('clicked'), 200);
+
+                // Play click sound
+                if (colorSound) {
+                    colorSound.currentTime = 0;
+                    colorSound.play();
+                }
+
+                if (clickedColor === currentColor) {
+                    scoreCorrect++;
+                } else {
+                    scoreIncorrect++;
+                }
+
+                // End game if maximum inputs reached
+                if (scoreCorrect + scoreIncorrect >= maxInputs) {
+                    endGame();
+                }
+            });
+        });
+
+        function endGame() {
+            gameStarted = false;
+            grid.style.display = 'none';  
+            popup.style.display = 'block';  
+            clearInterval(voiceInterval);
+            clearInterval(colorShuffleInterval);
+            synth.cancel();  
+
+            // Update results
+            correctCount.innerText = scoreCorrect;
+            incorrectCount.innerText = scoreIncorrect;
+        }
+
+        async function fetchUniqueTestID() {
+            try {
+                const response = await fetch('store_test_id.php'); 
+                const data = await response.json();
+                testID = data.test_id; 
+                document.getElementById('test-id').innerText = testID;
+            } catch (error) {
+                console.error('Error fetching test ID:', error);
+                document.getElementById('test-id').innerText = 'Error loading ID';
+            }
+        }
+
+        function submitResults() {
+            const formURL = "https://docs.google.com/forms/d/e/1FAIpQLScjcZvUS0esRBebG0Wluad1W8fAUBbmJNu6CGdmo-zP4MWU1Q/formResponse"; // Replace with your Google Form URL
+            const params = new URLSearchParams();
+            params.append('entry.113251147', testID); // Replace with actual entry ID
+            params.append('entry.792795476', scoreCorrect); // Replace with actual entry ID
+            params.append('entry.2109985675', scoreIncorrect); // Replace with actual entry ID
+
+            fetch(formURL, {
+                method: 'POST',
+                body: params,
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Results submitted successfully!');
+                    window.location.href = 'Home2.html'; // Redirect after submission
+                } else {
+                    alert('Failed to submit results.');
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting results:', error);
+                alert('Error submitting results.');
+            });
+        }
+    </script>
+</body>
+</html>
