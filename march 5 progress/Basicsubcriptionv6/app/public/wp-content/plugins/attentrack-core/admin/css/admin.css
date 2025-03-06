@@ -1,0 +1,217 @@
+.attentrack-meta-box {
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+/* Phase Blocks */
+.phase-block {
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.phase-header {
+    padding: 10px 15px;
+    margin: 0;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phase-content {
+    padding: 15px;
+}
+
+/* Stimulus Blocks */
+.stimuli-container {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+}
+
+.stimulus-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+.stimulus-handle {
+    cursor: move;
+    color: #666;
+}
+
+.stimulus-content {
+    flex-grow: 1;
+}
+
+/* Buttons */
+.add-phase {
+    margin-top: 20px !important;
+}
+
+.remove-phase,
+.remove-stimulus {
+    color: #a00;
+}
+
+.remove-phase:hover,
+.remove-stimulus:hover {
+    color: #dc3232;
+}
+
+/* Form Elements */
+.attentrack-meta-box input[type="text"],
+.attentrack-meta-box input[type="number"],
+.attentrack-meta-box select {
+    max-width: 100%;
+}
+
+.age-range {
+    display: flex;
+    gap: 20px;
+}
+
+/* Test Settings */
+.test-settings {
+    padding: 12px;
+}
+
+.test-settings label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Drag and Drop States */
+.ui-sortable-helper {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.ui-sortable-placeholder {
+    visibility: visible !important;
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 782px) {
+    .stimulus-block {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .stimulus-handle {
+        display: none;
+    }
+
+    .age-range {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Loading States */
+.attentrack-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.attentrack-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Validation States */
+.field-error {
+    border-color: #dc3232 !important;
+}
+
+.field-error-message {
+    color: #dc3232;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Help Tips */
+.attentrack-help-tip {
+    color: #666;
+    font-size: 16px;
+    cursor: help;
+}
+
+.attentrack-help-tip:hover {
+    color: #0073aa;
+}
+
+/* Preview Section */
+.test-preview {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+}
+
+.test-preview-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.test-preview-content {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+/* Media Uploader Integration */
+.stimulus-media-preview {
+    max-width: 150px;
+    max-height: 150px;
+    margin-top: 10px;
+}
+
+.stimulus-media-remove {
+    color: #a00;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Color Picker Integration */
+.wp-picker-container {
+    display: inline-block;
+    position: relative;
+}
+
+.wp-picker-holder {
+    position: absolute;
+    z-index: 100;
+}

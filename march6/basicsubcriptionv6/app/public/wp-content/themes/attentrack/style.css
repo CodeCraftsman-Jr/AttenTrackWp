@@ -1,0 +1,407 @@
+/*
+Theme Name: AttenTrack
+Theme URI: http://attentrack.com
+Author: AttenTrack Team
+Author URI: http://attentrack.com
+Description: A custom WordPress theme for the AttenTrack attention assessment platform
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: attentrack
+*/
+
+/* Import existing styles */
+:root {
+    --primary-color: #84cbd4;
+    --secondary-color: #2c455d;
+    --accent-color: #c1ffe1;
+    --text-color: #000000;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Enhanced Navigation */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 5px 0;
+}
+
+.home-mov {
+    padding-left: 25%;
+}
+
+.home-pad {
+    padding-right: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.home-pad:hover {
+    color: var(--primary-color);
+}
+
+/* Navigation Styles */
+.navbar {
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-link {
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.nav-link.active {
+    color: #007bff;
+}
+
+/* Responsive Navigation */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Enhanced Hero Section */
+.overlay-container {
+    height: 85vh;
+    background: linear-gradient(
+        135deg,
+        rgba(44,69,93,0.45),
+        rgba(0,1,44,0.45)
+    ),
+    url('/wp-content/includes/images/containerbg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.wel2-text {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.wel-text {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: titleFadeIn 1.5s ease-out;
+}
+
+@keyframes titleFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wel2-text h3 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: quoteSlideUp 0.6s ease-out forwards;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.wel2-text h3:nth-child(1) { animation-delay: 0.3s; }
+.wel2-text h3:nth-child(2) { animation-delay: 0.6s; }
+.wel2-text h3:nth-child(3) { animation-delay: 0.9s; }
+.wel2-text h3:nth-child(4) { animation-delay: 1.2s; }
+.wel2-text h3:nth-child(5) { animation-delay: 1.5s; }
+
+@keyframes quoteSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Button Styling */
+.btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: var(--primary-color);
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(132, 203, 212, 0.4);
+}
+
+/* Enhanced Section Styling */
+.sec-2 {
+    margin-top: 100px;
+    padding: 60px 0;
+    background-color: var(--light-bg);
+}
+
+.sec-text {
+    font-size: 1.2rem;
+    margin-top: 25px;
+    word-spacing: 0.2em;
+    line-height: 1.8em;
+    color: #555;
+}
+
+/* Enhanced Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.stat h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Enhanced Footer */
+footer {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+/* Enhanced Top Header */
+.top-header {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
+}
+
+.top-header .contact-info p {
+    display: inline-block;
+    margin-right: 30px;
+    transition: color 0.3s ease;
+}
+
+.top-header .contact-info p:hover {
+    color: var(--primary-color);
+}
+
+.top-header .contact-info i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+/* Contact Page Styles */
+.contact-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('wp-content/includes/images/containerbg.jpg');
+    opacity: 0.1;
+}
+
+.contact-info {
+    transition: transform 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    transition: all 0.3s ease;
+}
+
+.contact-info:hover .icon-box {
+    transform: scale(1.1);
+}
+
+.form-floating > .form-control:focus {
+    border-width: 2px;
+}
+
+.form-floating > .form-control:focus ~ label {
+    transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+}
+
+.contact-form .btn-primary {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.contact-form .btn-primary:active {
+    transform: translateY(0);
+}
+
+.map-section {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.map-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Authentication Pages Styles */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-login .btn {
+    min-width: 120px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+}
+
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#phoneStep1, #phoneStep2 {
+    transition: all 0.3s ease;
+}
+
+/* Form validation styles */
+.was-validated .form-control:invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.was-validated .form-control:valid:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-info {
+        margin-bottom: 2rem;
+    }
+    
+    .map-section {
+        margin-top: 2rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wel-text {
+        font-size: 2.5rem;
+    }
+    .home-mov {
+        padding-left: 0;
+    }
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .stat {
+        width: 100%;
+    }
+}
