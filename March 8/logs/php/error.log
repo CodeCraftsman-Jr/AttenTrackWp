@@ -1,0 +1,37 @@
+[07-Mar-2025 04:44:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0-template.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0-template.php on line 6
+[07-Mar-2025 04:45:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_user_logged_in() in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0.php on line 6
+[07-Mar-2025 04:45:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_user_logged_in() in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test2.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test2.php on line 6
+[07-Mar-2025 04:45:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0-template.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0-template.php on line 6
+[07-Mar-2025 10:05:21 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "php" in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php:280
+Stack trace:
+#0 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-blog-header.php(19): require_once('C:\\Users\\DBMS\\L...')
+#2 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\index.php(17): require('C:\\Users\\DBMS\\L...')
+#3 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php on line 280
+[07-Mar-2025 10:05:28 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "php" in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php:280
+Stack trace:
+#0 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-blog-header.php(19): require_once('C:\\Users\\DBMS\\L...')
+#2 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\index.php(17): require('C:\\Users\\DBMS\\L...')
+#3 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php on line 280
+[07-Mar-2025 10:10:40 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "php" in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php:280
+Stack trace:
+#0 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-blog-header.php(19): require_once('C:\\Users\\DBMS\\L...')
+#2 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\index.php(17): require('C:\\Users\\DBMS\\L...')
+#3 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php on line 280

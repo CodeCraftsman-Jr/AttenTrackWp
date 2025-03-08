@@ -1,0 +1,533 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: login-page-styler\n"
+"POT-Creation-Date: 2023-10-09 15:11+0500\n"
+"PO-Revision-Date: 2023-10-09 15:13+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: esc_html_e\n"
+"X-Poedit-SearchPath-0: loginPageStylerOption.php\n"
+
+#: loginPageStylerOption.php:186
+msgid "Login Page Styler"
+msgstr ""
+
+#: loginPageStylerOption.php:187
+msgid "Get Premium Support 24/7 Through E-mail : ziaimtiaz21@gmail.com "
+msgstr ""
+
+#: loginPageStylerOption.php:188
+msgid ""
+"If you want to do any feature request or you want us to Style your login "
+"page E-mail us : ziaimtiaz21@gmail.com"
+msgstr ""
+
+#: loginPageStylerOption.php:196
+msgid "Login Settings"
+msgstr ""
+
+#: loginPageStylerOption.php:199
+msgid "Enable Plugin :"
+msgstr ""
+
+#: loginPageStylerOption.php:212
+msgid "Hide Login Logo"
+msgstr ""
+
+#: loginPageStylerOption.php:226
+msgid "Hide Login Error Msg"
+msgstr ""
+
+#: loginPageStylerOption.php:241
+msgid "Hide Lost Password Link"
+msgstr ""
+
+#: loginPageStylerOption.php:255
+msgid "Hide Back to Blog Link"
+msgstr ""
+
+#: loginPageStylerOption.php:268
+msgid "Hide Language switcher on Login "
+msgstr ""
+
+#: loginPageStylerOption.php:285
+msgid "Logo Settings"
+msgstr ""
+
+#: loginPageStylerOption.php:289
+msgid "Logo Link"
+msgstr ""
+
+#: loginPageStylerOption.php:292
+msgid ""
+"Enter site url eg: www.google.com ,It will redirect user when logo is clicked"
+msgstr ""
+
+#: loginPageStylerOption.php:299
+msgid "Logo Title"
+msgstr ""
+
+#: loginPageStylerOption.php:302
+msgid "Enter Tittle for logo eg:Powered by abcd. "
+msgstr ""
+
+#: loginPageStylerOption.php:309
+msgid "Logo Image"
+msgstr ""
+
+#: loginPageStylerOption.php:313
+msgid "Upload or Select Logo Image,Use 80px X 80px logo,"
+msgstr ""
+
+#: loginPageStylerOption.php:320
+msgid "Logo Width"
+msgstr ""
+
+#: loginPageStylerOption.php:323
+msgid "Slide to select  logo width as per your logo width."
+msgstr ""
+
+#: loginPageStylerOption.php:330
+msgid "Logo Height"
+msgstr ""
+
+#: loginPageStylerOption.php:333
+msgid "Slide to select  logo height as per your logo height"
+msgstr ""
+
+#: loginPageStylerOption.php:344
+msgid "Login Background Settings"
+msgstr ""
+
+#: loginPageStylerOption.php:347
+msgid "Background Color"
+msgstr ""
+
+#: loginPageStylerOption.php:350
+msgid "Change background color"
+msgstr ""
+
+#: loginPageStylerOption.php:356
+msgid "Login Background Image"
+msgstr ""
+
+#: loginPageStylerOption.php:360
+msgid "Upload or Select  Background Image ,"
+msgstr ""
+
+#: loginPageStylerOption.php:366
+msgid "Login Body Background Image Repeat"
+msgstr ""
+
+#: loginPageStylerOption.php:373
+msgid "Backgroun image repeat"
+msgstr ""
+
+#: loginPageStylerOption.php:381
+msgid "Form Settings"
+msgstr ""
+
+#: loginPageStylerOption.php:385
+msgid "Change Login Form Position"
+msgstr ""
+
+#: loginPageStylerOption.php:398
+msgid "Select option to change Login Form Position"
+msgstr ""
+
+#: loginPageStylerOption.php:399
+msgid "While using bottom positioning, Hide error msg  on top of this plugin"
+msgstr ""
+
+#: loginPageStylerOption.php:405
+msgid "Login Form Background Image"
+msgstr ""
+
+#: loginPageStylerOption.php:409
+msgid "Upload or Select Form Background Image "
+msgstr ""
+
+#: loginPageStylerOption.php:414
+msgid "Login Form Color"
+msgstr ""
+
+#: loginPageStylerOption.php:417
+msgid "Change Form color"
+msgstr ""
+
+#: loginPageStylerOption.php:423
+msgid "Login Form Color with Opacity"
+msgstr ""
+
+#: loginPageStylerOption.php:426
+msgid ""
+"Add RGBA color value eg: 255 , 255 , 255 ,0.5 last value in decimal is the "
+"Opacity ."
+msgstr ""
+
+#: loginPageStylerOption.php:432
+msgid "Label Color"
+msgstr ""
+
+#: loginPageStylerOption.php:435
+msgid "Change form label(Username /Password) color"
+msgstr ""
+
+#: loginPageStylerOption.php:440
+msgid "Login Form Label Size"
+msgstr ""
+
+#: loginPageStylerOption.php:443
+msgid "Slide to change form label size "
+msgstr ""
+
+#: loginPageStylerOption.php:448
+msgid "Login Form  Remember Me Label Size"
+msgstr ""
+
+#: loginPageStylerOption.php:451
+msgid "Slide to change login form remember me label size ."
+msgstr ""
+
+#: loginPageStylerOption.php:458
+msgid "Login Form Border Style"
+msgstr ""
+
+#: loginPageStylerOption.php:462
+msgid "Slide to change border width"
+msgstr ""
+
+#: loginPageStylerOption.php:473
+msgid "Select login form border style,"
+msgstr ""
+
+#: loginPageStylerOption.php:479
+msgid "Login Form Border Color"
+msgstr ""
+
+#: loginPageStylerOption.php:482
+msgid "Change login form  border color ."
+msgstr ""
+
+#: loginPageStylerOption.php:487
+msgid "Login Form Border Radius"
+msgstr ""
+
+#: loginPageStylerOption.php:490
+msgid "Slide to change Login form border radius"
+msgstr ""
+
+#: loginPageStylerOption.php:496
+msgid "Login Form Input Field Border Style"
+msgstr ""
+
+#: loginPageStylerOption.php:499
+msgid "Slide to change Login form input-field border size."
+msgstr ""
+
+#: loginPageStylerOption.php:510
+msgid "Select login form input field border style."
+msgstr ""
+
+#: loginPageStylerOption.php:516
+msgid "Login Form Input Field Border Color"
+msgstr ""
+
+#: loginPageStylerOption.php:519
+msgid "Change login form input field border color."
+msgstr ""
+
+#: loginPageStylerOption.php:526
+msgid "Login Form Input Field Border Radius"
+msgstr ""
+
+#: loginPageStylerOption.php:529
+msgid "Slide to change Login form input-field border radius."
+msgstr ""
+
+#: loginPageStylerOption.php:534
+msgid "Login Form Input Field Color with Opacity"
+msgstr ""
+
+#: loginPageStylerOption.php:537
+msgid ""
+"Add RGBA color value eg: 255 , 255 , 255 ,0.5 last value in decimal is the "
+"Opacity."
+msgstr ""
+
+#: loginPageStylerOption.php:546
+msgid "Google Fonts"
+msgstr ""
+
+#: loginPageStylerOption.php:549
+msgid "Google font Label "
+msgstr ""
+
+#: loginPageStylerOption.php:556
+msgid "Google font Navigation Links "
+msgstr ""
+
+#: loginPageStylerOption.php:563
+msgid "Google font Error Messages "
+msgstr ""
+
+#: loginPageStylerOption.php:570
+msgid "Google font Button "
+msgstr ""
+
+#: loginPageStylerOption.php:580
+msgid "Button Settings"
+msgstr ""
+
+#: loginPageStylerOption.php:583
+msgid "Login Button Border Radius"
+msgstr ""
+
+#: loginPageStylerOption.php:586
+msgid "Slide to change login button border radius ."
+msgstr ""
+
+#: loginPageStylerOption.php:591
+msgid "Login Button Color"
+msgstr ""
+
+#: loginPageStylerOption.php:594
+msgid "Change login button color"
+msgstr ""
+
+#: loginPageStylerOption.php:595
+msgid "Login Button Border Color"
+msgstr ""
+
+#: loginPageStylerOption.php:596
+msgid "Login Button Text Color"
+msgstr ""
+
+#: loginPageStylerOption.php:601
+msgid "Login Button Color Hover"
+msgstr ""
+
+#: loginPageStylerOption.php:604
+msgid "Change login button color hover."
+msgstr ""
+
+#: loginPageStylerOption.php:605
+msgid "Login Button Border Color Hover. "
+msgstr ""
+
+#: loginPageStylerOption.php:606
+msgid "Login Button Text Color Hover. "
+msgstr ""
+
+#: loginPageStylerOption.php:613
+msgid "Lost password and Back to blog "
+msgstr ""
+
+#: loginPageStylerOption.php:616
+msgid "Navigation Link Size"
+msgstr ""
+
+#: loginPageStylerOption.php:619
+msgid "Slide to change Navigation Link Size ."
+msgstr ""
+
+#: loginPageStylerOption.php:624
+msgid "Navigation Links Color"
+msgstr ""
+
+#: loginPageStylerOption.php:627
+msgid "Change navigation link color"
+msgstr ""
+
+#: loginPageStylerOption.php:634
+msgid "Navigation Hover Links Color"
+msgstr ""
+
+#: loginPageStylerOption.php:637
+msgid "Change navigiation link hover color."
+msgstr ""
+
+#: loginPageStylerOption.php:646 loginPageStylerOption.php:649
+msgid "Custom CSS"
+msgstr ""
+
+#: loginPageStylerOption.php:652
+msgid "Add styling inside this text area."
+msgstr ""
+
+#: loginPageStylerOption.php:682
+msgid ""
+"If you want us to Style your login page or want any new Feature Email us : "
+"ziaimtiaz21@gmail.com"
+msgstr ""
+
+#: loginPageStylerOption.php:685 loginPageStylerOption.php:724
+#: loginPageStylerOption.php:796 loginPageStylerOption.php:825
+#: loginPageStylerOption.php:884 loginPageStylerOption.php:1035
+#: loginPageStylerOption.php:1092
+msgid "Save Changes"
+msgstr ""
+
+#: loginPageStylerOption.php:694
+msgid "Custom Templates"
+msgstr ""
+
+#: loginPageStylerOption.php:697
+msgid "Select Layout"
+msgstr ""
+
+#: loginPageStylerOption.php:734
+msgid "Google ReCaptcha V2"
+msgstr ""
+
+#: loginPageStylerOption.php:739
+msgid "Site Key"
+msgstr ""
+
+#: loginPageStylerOption.php:742
+msgid "Enter Site Key "
+msgstr ""
+
+#: loginPageStylerOption.php:747
+msgid "Secret Key"
+msgstr ""
+
+#: loginPageStylerOption.php:750
+msgid "Enter Secret Key "
+msgstr ""
+
+#: loginPageStylerOption.php:755
+msgid "Enable Google ReCaptcha On Login"
+msgstr ""
+
+#: loginPageStylerOption.php:769
+msgid "Enable Google ReCaptcha On Registration"
+msgstr ""
+
+#: loginPageStylerOption.php:782
+msgid "Enable Google ReCaptcha On Lost Password"
+msgstr ""
+
+#: loginPageStylerOption.php:807
+msgid "Login Logout Menu Item"
+msgstr ""
+
+#: loginPageStylerOption.php:810
+msgid "Show Login/Logout In Menu"
+msgstr ""
+
+#: loginPageStylerOption.php:819
+msgid "This feature will show a login/logout menu item in your sites menu."
+msgstr ""
+
+#: loginPageStylerOption.php:835
+msgid "Login Redirect"
+msgstr ""
+
+#: loginPageStylerOption.php:839
+msgid "Redirect user after login"
+msgstr ""
+
+#: loginPageStylerOption.php:855
+msgid "Select page which you want user to land on after login."
+msgstr ""
+
+#: loginPageStylerOption.php:862
+msgid "Redirect user after logout"
+msgstr ""
+
+#: loginPageStylerOption.php:878
+msgid "Select page which you want user to land on after logout"
+msgstr ""
+
+#: loginPageStylerOption.php:892
+msgid "Login Protected Site"
+msgstr ""
+
+#: loginPageStylerOption.php:895
+msgid "Enable Private Site"
+msgstr ""
+
+#: loginPageStylerOption.php:904
+msgid "This feature will make your whole site login protected site"
+msgstr ""
+
+#: loginPageStylerOption.php:911
+msgid "Block Page Access 1"
+msgstr ""
+
+#: loginPageStylerOption.php:927 loginPageStylerOption.php:953
+msgid "Select page which you want to be login protected "
+msgstr ""
+
+#: loginPageStylerOption.php:937
+msgid "Block Page Access 2 "
+msgstr ""
+
+#: loginPageStylerOption.php:962
+msgid "Block Page Access 3"
+msgstr ""
+
+#: loginPageStylerOption.php:978 loginPageStylerOption.php:1002
+#: loginPageStylerOption.php:1027
+msgid "Select page which you want to be login protected."
+msgstr ""
+
+#: loginPageStylerOption.php:986
+msgid "Block Page Access 4"
+msgstr ""
+
+#: loginPageStylerOption.php:1011
+msgid "Block Page Access 5"
+msgstr ""
+
+#: loginPageStylerOption.php:1046
+msgid "Limit Login Security"
+msgstr ""
+
+#: loginPageStylerOption.php:1049
+msgid "Enable Limit Login Security"
+msgstr ""
+
+#: loginPageStylerOption.php:1058
+msgid "Select Yes to Enable limit login on your login page "
+msgstr ""
+
+#: loginPageStylerOption.php:1064
+msgid "Login Attempts"
+msgstr ""
+
+#: loginPageStylerOption.php:1067
+msgid "Number of Attempts before login lockdown."
+msgstr ""
+
+#: loginPageStylerOption.php:1073
+msgid "Attempts With In "
+msgstr ""
+
+#: loginPageStylerOption.php:1076
+msgid " Failed Attempts within this time period will be blocked."
+msgstr ""
+
+#: loginPageStylerOption.php:1082
+msgid "Lockdown Time"
+msgstr ""
+
+#: loginPageStylerOption.php:1085
+msgid " Time period to block an IP to rety the Login Attempts  "
+msgstr ""
+
+#: loginPageStylerOption.php:1106
+msgid "Limit Login Blocked Ip"
+msgstr ""
+
+#: loginPageStylerOption.php:1171
+msgid "Release Selected"
+msgstr ""
