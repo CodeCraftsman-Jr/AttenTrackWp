@@ -1,0 +1,141 @@
+[07-Mar-2025 04:44:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0-template.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0-template.php on line 6
+[07-Mar-2025 04:45:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_user_logged_in() in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0.php on line 6
+[07-Mar-2025 04:45:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_user_logged_in() in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test2.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test2.php on line 6
+[07-Mar-2025 04:45:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0-template.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\tests\test-phase-0-template.php on line 6
+[07-Mar-2025 10:05:21 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "php" in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php:280
+Stack trace:
+#0 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-blog-header.php(19): require_once('C:\\Users\\DBMS\\L...')
+#2 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\index.php(17): require('C:\\Users\\DBMS\\L...')
+#3 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php on line 280
+[07-Mar-2025 10:05:28 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "php" in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php:280
+Stack trace:
+#0 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-blog-header.php(19): require_once('C:\\Users\\DBMS\\L...')
+#2 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\index.php(17): require('C:\\Users\\DBMS\\L...')
+#3 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php on line 280
+[07-Mar-2025 10:10:40 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "php" in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php:280
+Stack trace:
+#0 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-blog-header.php(19): require_once('C:\\Users\\DBMS\\L...')
+#2 C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\index.php(17): require('C:\\Users\\DBMS\\L...')
+#3 {main}
+  thrown in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\templates\test-results.php on line 280
+[10-Mar-2025 08:49:48 UTC] Cron reschedule event error for hook: wp_update_themes, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"twicedaily","args":[],"interval":43200}
+[10-Mar-2025 09:37:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT * FROM wp_test_results WHERE user_id = 6 ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:37:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT 
+                                            test_phase,
+                                            COUNT(*) as total_tests,
+                                            AVG(accuracy) as avg_accuracy,
+                                            AVG(reaction_time) as avg_reaction_time,
+                                            AVG(score) as avg_score
+                                        FROM wp_test_results 
+                                        WHERE user_id = 6 
+                                        GROUP BY test_phase made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:37:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT COUNT(*) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:37:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT AVG(accuracy) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:37:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT test_phase, accuracy, test_date 
+         FROM wp_test_results 
+         WHERE user_id = 6 
+         ORDER BY test_date ASC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:39:35 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT * FROM wp_test_results WHERE user_id = 6 ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:39:35 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT 
+                                            test_phase,
+                                            COUNT(*) as total_tests,
+                                            AVG(accuracy) as avg_accuracy,
+                                            AVG(reaction_time) as avg_reaction_time,
+                                            AVG(score) as avg_score
+                                        FROM wp_test_results 
+                                        WHERE user_id = 6 
+                                        GROUP BY test_phase made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:39:35 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT COUNT(*) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:39:35 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT AVG(accuracy) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:39:35 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT test_phase, accuracy, test_date 
+         FROM wp_test_results 
+         WHERE user_id = 6 
+         ORDER BY test_date ASC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:47:21 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT * FROM wp_test_results WHERE user_id = 6 ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:47:21 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT 
+                                            test_phase,
+                                            COUNT(*) as total_tests,
+                                            AVG(accuracy) as avg_accuracy,
+                                            AVG(reaction_time) as avg_reaction_time,
+                                            AVG(score) as avg_score
+                                        FROM wp_test_results 
+                                        WHERE user_id = 6 
+                                        GROUP BY test_phase made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:47:21 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT COUNT(*) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:47:21 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT AVG(accuracy) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 09:47:21 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT test_phase, accuracy, test_date 
+         FROM wp_test_results 
+         WHERE user_id = 6 
+         ORDER BY test_date ASC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:19:08 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT * FROM wp_test_results WHERE user_id = 6 ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:19:08 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT 
+                                            test_phase,
+                                            COUNT(*) as total_tests,
+                                            AVG(accuracy) as avg_accuracy,
+                                            AVG(reaction_time) as avg_reaction_time,
+                                            AVG(score) as avg_score
+                                        FROM wp_test_results 
+                                        WHERE user_id = 6 
+                                        GROUP BY test_phase made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:19:08 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT COUNT(*) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:19:08 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT AVG(accuracy) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:19:08 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT test_phase, accuracy, test_date 
+         FROM wp_test_results 
+         WHERE user_id = 6 
+         ORDER BY test_date ASC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:28:19 UTC] PHP Warning:  Undefined array key "total_responses" in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\functions.php on line 515
+[10-Mar-2025 10:28:19 UTC] PHP Warning:  Undefined array key "correct_responses" in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\functions.php on line 516
+[10-Mar-2025 10:28:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT * FROM wp_test_results WHERE user_id = 6 ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:28:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT 
+                                            test_phase,
+                                            COUNT(*) as total_tests,
+                                            AVG(accuracy) as avg_accuracy,
+                                            AVG(reaction_time) as avg_reaction_time,
+                                            AVG(score) as avg_score
+                                        FROM wp_test_results 
+                                        WHERE user_id = 6 
+                                        GROUP BY test_phase made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:28:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT COUNT(*) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:28:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT AVG(accuracy) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:28:30 UTC] WordPress database error Table 'local.wp_test_results' doesn't exist for query SELECT test_phase, accuracy, test_date 
+         FROM wp_test_results 
+         WHERE user_id = 6 
+         ORDER BY test_date ASC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:34:08 UTC] WordPress database error Unknown column 'user_id' in 'where clause' for query SELECT * FROM wp_test_results WHERE user_id = 6 ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:34:08 UTC] WordPress database error Unknown column 'user_id' in 'where clause' for query SELECT 
+                                            test_phase,
+                                            COUNT(*) as total_tests,
+                                            AVG(accuracy) as avg_accuracy,
+                                            AVG(reaction_time) as avg_reaction_time,
+                                            AVG(score) as avg_score
+                                        FROM wp_test_results 
+                                        WHERE user_id = 6 
+                                        GROUP BY test_phase made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:34:08 UTC] WordPress database error Unknown column 'user_id' in 'where clause' for query SELECT COUNT(*) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:34:08 UTC] WordPress database error Unknown column 'user_id' in 'where clause' for query SELECT AVG(accuracy) FROM wp_test_results WHERE user_id = 6 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:34:08 UTC] WordPress database error Unknown column 'user_id' in 'where clause' for query SELECT test_phase, accuracy, test_date 
+         FROM wp_test_results 
+         WHERE user_id = 6 
+         ORDER BY test_date ASC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[10-Mar-2025 10:36:14 UTC] PHP Fatal error:  Cannot redeclare save_test_results() (previously declared in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\functions.php:594) in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\functions.php on line 802
+[10-Mar-2025 10:36:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[10-Mar-2025 10:36:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[10-Mar-2025 10:36:33 UTC] PHP Fatal error:  Cannot redeclare save_test_results() (previously declared in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\functions.php:594) in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\functions.php on line 802
+[10-Mar-2025 10:36:33 UTC] PHP Fatal error:  Cannot redeclare save_test_results() (previously declared in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\functions.php:594) in C:\Users\DBMS\Local Sites\basicsubcriptionv6\app\public\wp-content\themes\attentrack\functions.php on line 802
