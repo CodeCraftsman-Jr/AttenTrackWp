@@ -1,0 +1,101 @@
+[12-Mar-2025 09:46:41 UTC] WordPress database error Unknown column 's.test_id' in 'on clause' for query SELECT r.*, s.start_time 
+        FROM wp_test_results r
+        LEFT JOIN wp_test_sessions s ON r.test_id = s.test_id
+        WHERE r.user_id = 6 
+        ORDER BY r.test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php'), do_shortcode, preg_replace_callback, do_shortcode_tag, display_test_results_shortcode
+[12-Mar-2025 09:46:41 UTC] WordPress database error Unknown column 'tr.session_id' in 'on clause' for query SELECT tr.*, ts.start_time 
+        FROM wp_test_results tr
+        LEFT JOIN wp_test_sessions ts ON tr.session_id = ts.id 
+        WHERE tr.user_id = 6 
+        ORDER BY COALESCE(ts.start_time, tr.test_date) DESC, tr.test_phase ASC
+        LIMIT 15 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[12-Mar-2025 09:52:07 UTC] WordPress database error Unknown column 's.test_id' in 'on clause' for query SELECT r.*, s.start_time 
+        FROM wp_test_results r
+        LEFT JOIN wp_test_sessions s ON r.test_id = s.test_id
+        WHERE r.user_id = 6 
+        ORDER BY r.test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php'), do_shortcode, preg_replace_callback, do_shortcode_tag, display_test_results_shortcode
+[12-Mar-2025 09:52:07 UTC] WordPress database error Unknown column 'tr.test_type' in 'field list' for query SELECT 
+                            tr.*,
+                            COALESCE(ts.start_time, tr.test_date) as test_date,
+                            CASE 
+                                WHEN tr.test_type = 'phase' THEN CONCAT('Phase ', tr.test_phase)
+                                ELSE tr.test_type
+                            END as test_name
+                        FROM wp_test_results tr
+                        LEFT JOIN wp_test_sessions ts ON tr.session_id = ts.id
+                        WHERE tr.user_id = 6
+                        ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[12-Mar-2025 09:52:07 UTC] WordPress database error Unknown column 'tr.session_id' in 'on clause' for query SELECT tr.*, ts.start_time 
+        FROM wp_test_results tr
+        LEFT JOIN wp_test_sessions ts ON tr.session_id = ts.id 
+        WHERE tr.user_id = 6 
+        ORDER BY COALESCE(ts.start_time, tr.test_date) DESC, tr.test_phase ASC
+        LIMIT 15 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[12-Mar-2025 10:17:28 UTC] WordPress database error Unknown column 's.test_id' in 'on clause' for query SELECT r.*, s.start_time 
+        FROM wp_test_results r
+        LEFT JOIN wp_test_sessions s ON r.test_id = s.test_id
+        WHERE r.user_id = 6 
+        ORDER BY r.test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php'), do_shortcode, preg_replace_callback, do_shortcode_tag, display_test_results_shortcode
+[12-Mar-2025 10:17:28 UTC] WordPress database error Unknown column 'tr.test_type' in 'field list' for query SELECT 
+                                tr.*,
+                                COALESCE(ts.start_time, tr.test_date) as test_date,
+                                CASE 
+                                    WHEN tr.test_type = 'phase' THEN CONCAT('Phase ', tr.test_phase)
+                                    ELSE tr.test_type
+                                END as test_name
+                            FROM wp_test_results tr
+                            LEFT JOIN wp_test_sessions ts ON tr.session_id = ts.id
+                            WHERE tr.user_id = 6
+                            ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[12-Mar-2025 10:17:28 UTC] WordPress database error Unknown column 'tr.test_type' in 'field list' for query SELECT 
+            tr.*,
+            COALESCE(ts.start_time, tr.test_date) as test_date,
+            CASE 
+                WHEN tr.test_type = 'phase' THEN CONCAT('Phase ', tr.test_phase)
+                ELSE tr.test_type
+            END as test_name
+        FROM wp_test_results tr
+        LEFT JOIN wp_test_sessions ts ON tr.session_id = ts.id 
+        WHERE tr.user_id = 6 
+        ORDER BY COALESCE(ts.start_time, tr.test_date) DESC, tr.test_phase ASC
+        LIMIT 15 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[12-Mar-2025 10:20:34 UTC] WordPress database error Unknown column 's.test_id' in 'on clause' for query SELECT r.*, s.start_time 
+        FROM wp_test_results r
+        LEFT JOIN wp_test_sessions s ON r.test_id = s.test_id
+        WHERE r.user_id = 6 
+        ORDER BY r.test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php'), do_shortcode, preg_replace_callback, do_shortcode_tag, display_test_results_shortcode
+[12-Mar-2025 10:20:34 UTC] WordPress database error Unknown column 'tr.test_type' in 'field list' for query SELECT 
+                                tr.*,
+                                COALESCE(ts.start_time, tr.test_date) as test_date,
+                                CASE 
+                                    WHEN tr.test_type = 'phase' THEN CONCAT('Phase ', tr.test_phase)
+                                    ELSE tr.test_type
+                                END as test_name
+                            FROM wp_test_results tr
+                            LEFT JOIN wp_test_sessions ts ON tr.session_id = ts.id
+                            WHERE tr.user_id = 6
+                            ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[12-Mar-2025 10:27:45 UTC] WordPress database error Unknown column 's.test_id' in 'on clause' for query SELECT r.*, s.start_time 
+        FROM wp_test_results r
+        LEFT JOIN wp_test_sessions s ON r.test_id = s.test_id
+        WHERE r.user_id = 6 
+        ORDER BY r.test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php'), do_shortcode, preg_replace_callback, do_shortcode_tag, display_test_results_shortcode
+[12-Mar-2025 10:27:45 UTC] WordPress database error Unknown column 'tr.session_id' in 'on clause' for query SELECT 
+                                tr.*,
+                                COALESCE(ts.start_time, tr.test_date) as test_date
+                            FROM wp_test_results tr
+                            LEFT JOIN wp_test_sessions ts ON tr.session_id = ts.id
+                            WHERE tr.user_id = 6
+                            ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[12-Mar-2025 10:40:17 UTC] WordPress database error Unknown column 's.test_id' in 'on clause' for query SELECT r.*, s.start_time 
+        FROM wp_test_results r
+        LEFT JOIN wp_test_sessions s ON r.test_id = s.test_id
+        WHERE r.user_id = 6 
+        ORDER BY r.test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php'), do_shortcode, preg_replace_callback, do_shortcode_tag, display_test_results_shortcode
+[12-Mar-2025 10:40:17 UTC] WordPress database error Unknown column 'tr.session_id' in 'on clause' for query SELECT 
+                                tr.*,
+                                COALESCE(ts.start_time, tr.test_date) as test_date
+                            FROM wp_test_results tr
+                            LEFT JOIN wp_test_sessions ts ON tr.session_id = ts.id
+                            WHERE tr.user_id = 6
+                            ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
