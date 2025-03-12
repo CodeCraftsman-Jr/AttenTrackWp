@@ -1,0 +1,16 @@
+[12-Mar-2025 10:33:07 UTC] WordPress database error Unknown column 's.test_id' in 'on clause' for query SELECT r.*, s.start_time 
+        FROM wp_test_results r
+        LEFT JOIN wp_test_sessions s ON r.test_id = s.test_id
+        WHERE r.user_id = 6 
+        ORDER BY r.test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php'), do_shortcode, preg_replace_callback, do_shortcode_tag, display_test_results_shortcode
+[12-Mar-2025 10:33:07 UTC] WordPress database error Unknown column 'tr.session_id' in 'on clause' for query SELECT 
+                                tr.*,
+                                COALESCE(ts.start_time, tr.test_date) as test_date
+                            FROM wp_test_results tr
+                            LEFT JOIN wp_test_sessions ts ON tr.session_id = ts.id
+                            WHERE tr.user_id = 6
+                            ORDER BY test_date DESC made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/attentrack/page-dashboard.php')
+[12-Mar-2025 10:33:28 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\OS15\Local Sites\basicsubscriptionv6\app\public\wp-includes\class-wpdb.php on line 1982
+[12-Mar-2025 10:33:29 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\OS15\Local Sites\basicsubscriptionv6\app\public\wp-includes\class-wpdb.php on line 1982
+[12-Mar-2025 10:35:52 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\OS15\Local Sites\basicsubscriptionv6\app\public\wp-includes\class-wpdb.php on line 1982
+[12-Mar-2025 10:36:36 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\OS15\Local Sites\basicsubscriptionv6\app\public\wp-includes\class-wpdb.php on line 1982
