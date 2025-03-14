@@ -1,0 +1,1 @@
+mysql -h localhost -P 10006 -u local -proot -e "SHOW DATABASES;"
