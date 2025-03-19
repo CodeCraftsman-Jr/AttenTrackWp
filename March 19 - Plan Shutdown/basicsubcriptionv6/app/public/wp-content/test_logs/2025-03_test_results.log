@@ -1,0 +1,46 @@
+{
+    "timestamp": "2025-03-19 08:08:16",
+    "user_id": 6,
+    "test_id": "test_67da7b700db20",
+    "test_type": "selective_attention",
+    "test_phase": 0,
+    "metrics": {
+        "total_letters": 67,
+        "p_letters": 25,
+        "score": 0,
+        "accuracy": 0,
+        "reaction_time": 2,
+        "missed_responses": 25,
+        "false_alarms": 0
+    },
+    "result": "success",
+    "debug": {
+        "request_time": "2025-03-19 08:08:16",
+        "php_version": "8.2.23",
+        "wp_version": "6.7.2"
+    }
+}
+---
+{
+    "timestamp": "2025-03-19 08:19:41",
+    "user_id": 6,
+    "test_id": "test_67da7e1d304b3",
+    "test_type": "selective_attention",
+    "test_phase": 0,
+    "metrics": {
+        "total_letters": 66,
+        "p_letters": 25,
+        "score": 0,
+        "accuracy": 0,
+        "reaction_time": 2,
+        "missed_responses": 25,
+        "false_alarms": 0
+    },
+    "result": "success",
+    "debug": {
+        "request_time": "2025-03-19 08:19:41",
+        "php_version": "8.2.23",
+        "wp_version": "6.7.2"
+    }
+}
+---

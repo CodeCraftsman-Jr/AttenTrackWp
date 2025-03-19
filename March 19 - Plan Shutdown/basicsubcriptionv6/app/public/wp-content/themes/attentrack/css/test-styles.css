@@ -1,0 +1,183 @@
+/* Test Interface Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.test-section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.results-section {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.debug-section {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.debug-section h4 {
+    color: #495057;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Results Display Styles */
+.results-summary {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.results-summary h3 {
+    color: #212529;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item label {
+    color: #495057;
+    font-weight: 500;
+}
+
+.result-item span {
+    color: #212529;
+    font-weight: 600;
+}
+
+/* Console Log Styles */
+.console-log-entry {
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #28a745;
+}
+
+.console-log-entry.error {
+    border-left-color: #dc3545;
+}
+
+.log-timestamp {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+}
+
+.log-content {
+    color: #212529;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.log-content.error {
+    color: #dc3545;
+}
+
+/* Test Button Styles */
+.test-button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.test-button:hover {
+    background: #0056b3;
+}
+
+.test-button:active {
+    background: #004085;
+}
+
+/* Status Messages */
+.status-message {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.status-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Loading Indicator */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .test-section,
+    .results-section,
+    .debug-section {
+        padding: 15px;
+    }
+
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .result-item span {
+        margin-top: 5px;
+    }
+}
