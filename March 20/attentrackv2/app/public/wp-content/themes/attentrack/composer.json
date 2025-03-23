@@ -1,0 +1,14 @@
+{
+    "name": "attentrack/theme",
+    "description": "AttenTrack WordPress Theme",
+    "type": "wordpress-theme",
+    "require": {
+        "firebase/php-jwt": "^6.0",
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "AttenTrack\\": "inc/"
+        }
+    }
+}

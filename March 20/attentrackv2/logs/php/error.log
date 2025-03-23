@@ -1,0 +1,311 @@
+[20-Mar-2025 05:46:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\class-wp-styles.php:214) in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\pluggable.php on line 1435
+[20-Mar-2025 05:46:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\class-wp-styles.php:214) in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\pluggable.php on line 1438
+[20-Mar-2025 05:53:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_unique_test_id() in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php:240
+Stack trace:
+#0 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-blog-header.php(19): require_once('C:\\Users\\OS16\\L...')
+#2 C:\Users\OS16\Local Sites\attentrackv2\app\public\index.php(17): require('C:\\Users\\OS16\\L...')
+#3 {main}
+  thrown in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php on line 240
+[20-Mar-2025 05:54:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_unique_test_id() in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php:240
+Stack trace:
+#0 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-blog-header.php(19): require_once('C:\\Users\\OS16\\L...')
+#2 C:\Users\OS16\Local Sites\attentrackv2\app\public\index.php(17): require('C:\\Users\\OS16\\L...')
+#3 {main}
+  thrown in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php on line 240
+[20-Mar-2025 05:54:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_unique_test_id() in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php:240
+Stack trace:
+#0 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-blog-header.php(19): require_once('C:\\Users\\OS16\\L...')
+#2 C:\Users\OS16\Local Sites\attentrackv2\app\public\index.php(17): require('C:\\Users\\OS16\\L...')
+#3 {main}
+  thrown in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php on line 240
+[20-Mar-2025 05:54:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_unique_test_id() in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php:240
+Stack trace:
+#0 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-blog-header.php(19): require_once('C:\\Users\\OS16\\L...')
+#2 C:\Users\OS16\Local Sites\attentrackv2\app\public\index.php(17): require('C:\\Users\\OS16\\L...')
+#3 {main}
+  thrown in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php on line 240
+[20-Mar-2025 05:55:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_unique_test_id() in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php:240
+Stack trace:
+#0 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-blog-header.php(19): require_once('C:\\Users\\OS16\\L...')
+#2 C:\Users\OS16\Local Sites\attentrackv2\app\public\index.php(17): require('C:\\Users\\OS16\\L...')
+#3 {main}
+  thrown in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php on line 240
+[20-Mar-2025 05:55:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_unique_test_id() in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php:240
+Stack trace:
+#0 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-blog-header.php(19): require_once('C:\\Users\\OS16\\L...')
+#2 C:\Users\OS16\Local Sites\attentrackv2\app\public\index.php(17): require('C:\\Users\\OS16\\L...')
+#3 {main}
+  thrown in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test.php on line 240
+[20-Mar-2025 05:56:54 UTC] PHP Warning:  Undefined array key "test_id" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test-extended.php on line 244
+[20-Mar-2025 05:56:54 UTC] PHP Warning:  Undefined array key "test_id" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test-extended.php on line 497
+[20-Mar-2025 05:56:54 UTC] PHP Warning:  Undefined array key "test_id" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\selective-attention-test-extended.php on line 530
+[20-Mar-2025 06:49:18 UTC] PHP Fatal error:  Cannot redeclare generate_and_store_otp() (previously declared in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\authentication.php:49) in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\user-management.php on line 75
+[20-Mar-2025 06:49:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[20-Mar-2025 06:49:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[20-Mar-2025 06:50:07 UTC] PHP Fatal error:  Cannot redeclare generate_and_store_otp() (previously declared in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\authentication.php:49) in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\user-management.php on line 75
+[20-Mar-2025 06:50:08 UTC] PHP Fatal error:  Cannot redeclare generate_and_store_otp() (previously declared in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\authentication.php:49) in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\user-management.php on line 75
+[20-Mar-2025 06:50:08 UTC] PHP Fatal error:  Cannot redeclare generate_and_store_otp() (previously declared in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\authentication.php:49) in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\user-management.php on line 75
+[20-Mar-2025 06:50:10 UTC] PHP Fatal error:  Cannot redeclare generate_and_store_otp() (previously declared in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\authentication.php:49) in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\user-management.php on line 75
+[20-Mar-2025 06:50:10 UTC] PHP Fatal error:  Cannot redeclare generate_and_store_otp() (previously declared in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\authentication.php:49) in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\inc\user-management.php on line 75
+[20-Mar-2025 07:42:37 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SELECT * FROM wp_user_profiles WHERE user_id = 2 made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 07:42:37 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SHOW FULL COLUMNS FROM `wp_user_profiles` made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 07:49:43 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SELECT * FROM wp_user_profiles WHERE user_id = 2 made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 07:49:43 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SHOW FULL COLUMNS FROM `wp_user_profiles` made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 07:49:53 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SELECT * FROM wp_user_profiles WHERE user_id = 2 made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 07:49:53 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SHOW FULL COLUMNS FROM `wp_user_profiles` made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 08:09:48 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SELECT * FROM wp_user_profiles WHERE user_id = 2 made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 08:09:48 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SHOW FULL COLUMNS FROM `wp_user_profiles` made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "incorrectResponses" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 262
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "reactionTime" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 263
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "incorrectResponses" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 267
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "reactionTime" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 268
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "incorrectResponses" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 262
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "reactionTime" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 263
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "incorrectResponses" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 267
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "reactionTime" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 268
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "incorrectResponses" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 262
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "reactionTime" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 263
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "incorrectResponses" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 267
+[20-Mar-2025 08:46:26 UTC] PHP Warning:  Undefined array key "reactionTime" in C:\Users\OS16\Local Sites\attentrackv2\app\public\wp-content\themes\attentrack\functions.php on line 268
+[20-Mar-2025 09:22:21 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:23 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:32 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:32 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:32 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:40 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:40 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:40 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:45 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:45 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:45 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:46 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:22:48 UTC] Inserting data into wp_attentrack_extended_results: Array
+(
+    [test_id] => TEST-1742462568
+    [profile_id] => P-TEST-1742462568
+    [phase] => 1
+    [total_letters] => 100
+    [p_letters] => 20
+    [correct_responses] => 18
+    [incorrect_responses] => 2
+    [reaction_time] => 0.75
+)
+
+[20-Mar-2025 09:22:48 UTC] Successfully inserted extended results with ID: 1
+[20-Mar-2025 09:22:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:12 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:12 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:12 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:20 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:20 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:20 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:21 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:21 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:37 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:23:37 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:28:13 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:28:13 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:31:05 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:31:05 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:31:07 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:31:07 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:31:22 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:33:13 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:34:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:34:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:38:13 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:39:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:39:30 UTC] Generated new test ID for user 2: T-2-1742463570
+[20-Mar-2025 09:39:30 UTC] Generated new profile ID for user 2: P-2
+[20-Mar-2025 09:39:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:40:37 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:41:22 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:41:22 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:41:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:41:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:41:30 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:42:22 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:42:22 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:42:22 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:43:13 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:46:13 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:46:13 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:46:13 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:48:26 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:50:20 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:50:38 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:50:38 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:51:41 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:51:41 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:53:20 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:53:20 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:53:26 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:55:34 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:55:34 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:57:03 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:57:03 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:57:04 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:58:26 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:58:46 UTC] AttenTrack tables created or updated
+[20-Mar-2025 09:58:46 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:01:47 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:01:47 UTC] Generated new test ID for user 1: T-1-1742464907
+[20-Mar-2025 10:01:47 UTC] Generated new profile ID for user 1: P-1
+[20-Mar-2025 10:01:47 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:01:47 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:03:47 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:05:33 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:05:33 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:05:33 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:06:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:10:34 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:11:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:15:01 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:15:01 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:15:34 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:16:26 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:16:26 UTC] Received test results for selective_attention: Array
+(
+    [totalLetters] => 55
+    [pLetters] => 25
+    [correctResponses] => 9
+    [incorrectResponses] => 5
+    [reactionTime] => 1.4761142857142857
+    [testId] => 
+    [timestamp] => 2025-03-20T10:16:26.047Z
+    [score] => 674
+)
+
+[20-Mar-2025 10:16:26 UTC] User IDs: Array
+(
+    [test_id] => T-1-1742464907
+    [profile_id] => P-1
+)
+
+[20-Mar-2025 10:16:29 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:16:29 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:16:29 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:18:38 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:18:40 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:18:40 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:20:34 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:21:04 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:21:04 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:21:04 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:23:41 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:23:41 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:26:05 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:28:36 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:28:36 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:28:36 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:28:41 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:28:56 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:28:57 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:28:57 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:29:16 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:29:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:29:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:29:48 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:30:38 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:30:38 UTC] Received test results for selective_attention: Array
+(
+    [totalLetters] => 49
+    [pLetters] => 21
+    [correctResponses] => 0
+    [incorrectResponses] => 0
+    [reactionTime] => 2
+    [testId] => T1742456563626
+    [timestamp] => 2025-03-20T10:30:38.045Z
+    [score] => 0
+)
+
+[20-Mar-2025 10:30:38 UTC] User IDs: Array
+(
+    [test_id] => T-2-1742463570
+    [profile_id] => P-2
+)
+
+[20-Mar-2025 10:30:41 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:30:41 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:30:41 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:34:49 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:35:42 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:39:49 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:40:42 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:40:50 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:40:51 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:40:51 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:00 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:00 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:01 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:01 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:01 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:01 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:02 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:02 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:03 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:03 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:03 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:17 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:18 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:18 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:19 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:19 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:25 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:26 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SELECT * FROM wp_user_profiles WHERE user_id = 3 made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 10:41:26 UTC] WordPress database error Table 'local.wp_user_profiles' doesn't exist for query SHOW FULL COLUMNS FROM `wp_user_profiles` made by do_action('wp_ajax_nopriv_verify_firebase_token'), WP_Hook->do_action, WP_Hook->apply_filters, verify_firebase_token, create_or_update_user_profile
+[20-Mar-2025 10:41:26 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:26 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:28 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:28 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:29 UTC] Generated new test ID for user 3: T-3-1742467289
+[20-Mar-2025 10:41:29 UTC] Generated new profile ID for user 3: P-3
+[20-Mar-2025 10:41:29 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:36 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:41:36 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:42:57 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:42:58 UTC] Received test results for selective_attention: {\"totalLetters\":67,\"pLetters\":25,\"correctResponses\":0,\"incorrectResponses\":1,\"reactionTime\":1.9673461538461539,\"testId\":\"\",\"timestamp\":\"2025-03-20T10:42:57.924Z\",\"score\":0,\"accuracy\":\"0.0\",\"missedResponses\":25,\"falseAlarms\":1}
+[20-Mar-2025 10:42:58 UTC] User IDs: Array
+(
+    [test_id] => T-3-1742467289
+    [profile_id] => P-3
+)
+
+[20-Mar-2025 10:43:58 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:43:58 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:44:49 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:45:19 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:45:19 UTC] Received test results for selective_attention: {\"totalLetters\":67,\"pLetters\":25,\"correctResponses\":0,\"missedResponses\":25,\"falseAlarms\":0,\"accuracy\":\"0.0\",\"reactionTime\":\"2.000\",\"score\":0,\"timestamp\":\"2025-03-20T10:45:19.290Z\"}
+[20-Mar-2025 10:45:19 UTC] User IDs: Array
+(
+    [test_id] => T-3-1742467289
+    [profile_id] => P-3
+)
+
+[20-Mar-2025 10:47:25 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:47:25 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:48:46 UTC] AttenTrack tables created or updated
+[20-Mar-2025 10:48:46 UTC] Received test results for selective_attention_basic: {\"totalLetters\":67,\"pLetters\":25,\"correctResponses\":0,\"missedResponses\":25,\"falseAlarms\":0,\"accuracy\":\"0.0\",\"reactionTime\":\"2.000\",\"score\":0,\"timestamp\":\"2025-03-20T10:48:46.579Z\",\"testId\":\"\"}
+[20-Mar-2025 10:48:46 UTC] User IDs: Array
+(
+    [test_id] => T-3-1742467289
+    [profile_id] => P-3
+)
+
+[20-Mar-2025 10:49:49 UTC] AttenTrack tables created or updated

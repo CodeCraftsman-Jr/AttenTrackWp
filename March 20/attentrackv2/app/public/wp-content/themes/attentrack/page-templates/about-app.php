@@ -1,0 +1,255 @@
+<?php
+/**
+ * Template Name: About App Page
+ * 
+ * This is the template that displays the about app page.
+ */
+
+// get_header(); ?>
+
+<style>
+    :root {
+        --primary-color: #6366f1;
+        --secondary-color: #4f46e5;
+        --background-color: #0f172a;
+        --card-bg: rgba(255, 255, 255, 0.1);
+        --text-color: #e2e8f0;
+    }
+
+    body {
+        background: linear-gradient(135deg, var(--background-color), #1e293b);
+        color: var(--text-color);
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        min-height: 100vh;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .main-container {
+        padding: 2px 0;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .col-lg-4 {
+        flex: 1;
+        padding: 0 0.5rem;
+        min-width: 0;
+    }
+
+    .card {
+        background: var(--card-bg);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        height: 100%;
+        position: relative;
+        margin: 0 0.5rem;
+    }
+
+    .card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .card img {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .card:hover img {
+        transform: scale(1.1);
+        filter: brightness(0.7);
+    }
+
+    .card-body {
+        padding: 1.5rem;
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+    }
+
+    .card-text {
+        margin: 1rem 0;
+    }
+
+    .card-butt {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        border: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-butt:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        color: white;
+    }
+
+    .card-butt::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+        );
+        transition: 0.5s;
+    }
+
+    .card-butt:hover::before {
+        left: 100%;
+    }
+
+    .phase-label {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(99, 102, 241, 0.9);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        z-index: 2;
+    }
+
+    @media (max-width: 1200px) {
+        .container {
+            padding: 0 1rem;
+        }
+        
+        .card {
+            margin: 0 0.25rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .main-container {
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        
+        .row {
+            flex-wrap: nowrap;
+        }
+
+        .col-lg-4 {
+            flex: 0 0 85vw;
+            max-width: 85vw;
+            padding: 0 0.5rem;
+        }
+
+        .card {
+            margin: 0 0.5rem;
+        }
+    }
+
+    .animate__animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 40px, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .fadeInUp {
+        animation-name: fadeInUp;
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+            <h1 class="mb-4"><?php the_title(); ?></h1>
+                <div class="main-container">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Card 1 -->
+                            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                                <div class="card">
+                                    <span class="phase-label">Test 1</span>
+                                    <img src="https://www.verywellmind.com/thmb/MBJQ_HmRpZywx3gFenclF0JHkVo=/6000x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-selective-attention-2795022_final-5b6348f0c9e77c0050ba4710.png" 
+                                         class="card-img-top" alt="Phase 1">
+                                    <div class="card-body">
+                                        <a href="<?php echo esc_url(home_url('/comp1')); ?>" class="card-butt">Selective Attention</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                                <div class="card">
+                                    <span class="phase-label">Test 2</span>
+                                    <img src="https://nobaproject.com/images/shared/images/000/002/561/original.jpg" 
+                                         class="card-img-top" alt="Phase 2">
+                                    <div class="card-body">
+                                        <a href="<?php echo esc_url(home_url('/comp2')); ?>" class="card-butt">Selective and sustained attention</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+                                <div class="card">
+                                    <span class="phase-label">Test 3</span>
+                                    <img src="https://www.mentalup.co/img/blog/types-of-attentions-4.jpg" 
+                                         class="card-img-top" alt="Phase 3">
+                                    <div class="card-body">
+                                        <a href="<?php echo esc_url(home_url('/comp3')); ?>" class="card-butt">Alternate attention</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp" style="animation-delay: 0.8s">
+                                <div class="card">
+                                    <span class="phase-label">Test 4</span>
+                                    <img src="https://l450v.alamy.com/450v/2k8a0ym/stress-burnout-and-overworked-with-a-business-man-suffering-from-a-headache-and-feeling-overwhelmed-by-multitasking-demand-mental-health-frustrated-2k8a0ym.jpg" 
+                                         class="card-img-top" alt="Phase 4">
+                                    <div class="card-body">
+                                        <a href="<?php echo esc_url(home_url('/comp4')); ?>" class="card-butt">Divided attention</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- <?php get_footer(); ?> -->

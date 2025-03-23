@@ -1,0 +1,361 @@
+<?php
+/*
+Template Name: Dashboard
+*/
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .test-results-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .test-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .test-card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .phase-results {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-ids {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .overall-results {
+            margin-top: 15px;
+            padding: 15px;
+            background: #e8f4f8;
+            border-radius: 4px;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="profile-section">
+            <div class="profile-header">
+                <h2>User Profile</h2>
+                <div class="profile-ids">
+                    <div>Profile ID: <span id="profileId">-</span></div>
+                    <div>Test ID: <span id="testId">-</span></div>
+                </div>
+            </div>
+            <div id="profileDetails">
+                <!-- Profile details will be loaded here -->
+            </div>
+        </div>
+
+        <div class="test-results-section">
+            <!-- Selective Attention Test -->
+            <div class="test-card">
+                <h3>Selective Attention Test</h3>
+                <div id="selectiveAttentionResults">
+                    <div class="result-item">
+                        <span>Total Letters:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>P Letters:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Correct Responses:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Incorrect Responses:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Reaction Time (ms):</span>
+                        <span class="value">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selective Attention Test Extended -->
+            <div class="test-card">
+                <h3>Selective Attention Test Extended</h3>
+                <div id="extendedTestResults">
+                    <!-- Phase 1 -->
+                    <div class="phase-results">
+                        <h4>Phase 1</h4>
+                        <div class="result-item">
+                            <span>Total Letters:</span>
+                            <span class="value">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span>P Letters:</span>
+                            <span class="value">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Correct Responses:</span>
+                            <span class="value">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Incorrect Responses:</span>
+                            <span class="value">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Reaction Time (ms):</span>
+                            <span class="value">-</span>
+                        </div>
+                    </div>
+
+                    <!-- Phases 2-4 will be dynamically added with the same structure -->
+
+                    <div class="overall-results">
+                        <h4>Overall Results</h4>
+                        <div class="result-item">
+                            <span>Total Accuracy:</span>
+                            <span class="value">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Average Reaction Time:</span>
+                            <span class="value">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alternative Attention Test -->
+            <div class="test-card">
+                <h3>Alternative Attention Test</h3>
+                <div id="alternativeTestResults">
+                    <div class="result-item">
+                        <span>Correct Responses:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Incorrect Responses:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Reaction Time (ms):</span>
+                        <span class="value">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divided Attention Test -->
+            <div class="test-card">
+                <h3>Divided Attention Test</h3>
+                <div id="dividedTestResults">
+                    <div class="result-item">
+                        <span>Correct Responses:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Incorrect Responses:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Reaction Time (ms):</span>
+                        <span class="value">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    $(document).ready(function() {
+        // Check if user is logged in and has IDs
+        const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+        if (!userData.profileId) {
+            userData.profileId = 'P' + Date.now();
+            localStorage.setItem('userData', JSON.stringify(userData));
+        }
+        if (!userData.testId) {
+            userData.testId = 'T' + Date.now();
+            localStorage.setItem('userData', JSON.stringify(userData));
+        }
+
+        // Display IDs
+        $('#profileId').text(userData.profileId);
+        $('#testId').text(userData.testId);
+
+        // Load profile details
+        const patientDetails = JSON.parse(localStorage.getItem('patientDetails') || '{}');
+        let profileHtml = '';
+        for (const [key, value] of Object.entries(patientDetails)) {
+            if (key !== 'patientId') {
+                profileHtml += `
+                    <div class="result-item">
+                        <span>${key.charAt(0).toUpperCase() + key.slice(1)}:</span>
+                        <span>${value}</span>
+                    </div>
+                `;
+            }
+        }
+        $('#profileDetails').html(profileHtml);
+
+        // Load test results
+        function loadTestResults() {
+            // Load Selective Attention Test results
+            const selectiveResults = JSON.parse(localStorage.getItem('selectiveAttentionResults') || '{}');
+            if (selectiveResults.totalLetters) {
+                $('#selectiveAttentionResults .value').each(function(index) {
+                    const values = [
+                        selectiveResults.totalLetters,
+                        selectiveResults.pLetters,
+                        selectiveResults.correctResponses,
+                        selectiveResults.incorrectResponses,
+                        selectiveResults.reactionTime
+                    ];
+                    $(this).text(values[index] || '-');
+                });
+            }
+
+            // Load Extended Test results
+            const extendedResults = JSON.parse(localStorage.getItem('extendedTestResults') || '{}');
+            if (extendedResults.phases) {
+                extendedResults.phases.forEach((phase, index) => {
+                    // Update or create phase results
+                    let phaseHtml = `
+                        <div class="phase-results">
+                            <h4>Phase ${index + 1}</h4>
+                            <div class="result-item">
+                                <span>Total Letters:</span>
+                                <span class="value">${phase.totalLetters || '-'}</span>
+                            </div>
+                            <div class="result-item">
+                                <span>P Letters:</span>
+                                <span class="value">${phase.pLetters || '-'}</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Correct Responses:</span>
+                                <span class="value">${phase.correctResponses || '-'}</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Incorrect Responses:</span>
+                                <span class="value">${phase.incorrectResponses || '-'}</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Reaction Time (ms):</span>
+                                <span class="value">${phase.reactionTime || '-'}</span>
+                            </div>
+                        </div>
+                    `;
+                    
+                    if ($(`#extendedTestResults .phase-results:eq(${index})`).length) {
+                        $(`#extendedTestResults .phase-results:eq(${index})`).replaceWith(phaseHtml);
+                    } else {
+                        $('#extendedTestResults .overall-results').before(phaseHtml);
+                    }
+                });
+
+                // Update overall results
+                if (extendedResults.overall) {
+                    $('#extendedTestResults .overall-results .value').each(function(index) {
+                        const values = [
+                            extendedResults.overall.accuracy,
+                            extendedResults.overall.reactionTime
+                        ];
+                        $(this).text(values[index] || '-');
+                    });
+                }
+            }
+
+            // Load Alternative Test results
+            const alternativeResults = JSON.parse(localStorage.getItem('alternativeTestResults') || '{}');
+            if (alternativeResults.correctResponses) {
+                $('#alternativeTestResults .value').each(function(index) {
+                    const values = [
+                        alternativeResults.correctResponses,
+                        alternativeResults.incorrectResponses,
+                        alternativeResults.reactionTime
+                    ];
+                    $(this).text(values[index] || '-');
+                });
+            }
+
+            // Load Divided Test results
+            const dividedResults = JSON.parse(localStorage.getItem('dividedTestResults') || '{}');
+            if (dividedResults.correctResponses) {
+                $('#dividedTestResults .value').each(function(index) {
+                    const values = [
+                        dividedResults.correctResponses,
+                        dividedResults.incorrectResponses,
+                        dividedResults.reactionTime
+                    ];
+                    $(this).text(values[index] || '-');
+                });
+            }
+        }
+
+        // Load initial results
+        loadTestResults();
+
+        // Refresh results every 5 seconds
+        setInterval(loadTestResults, 5000);
+    });
+    </script>
+</body>
+</html>
