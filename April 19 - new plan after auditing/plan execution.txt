@@ -1,0 +1,9 @@
+As of now every detail of the users in my website is storred in usermeta i need separate tables in addition to this make this wp_usermeta as backup which will be storring data and used in case if other tables fails to fetch the data to which it is assigned to.
+
+i need separate tables for login releated data there is already an table called wp_users but this lacks certain data for example if user sign in using google sign of firebase and facebook details are stored here correctly and if user sign  in/ sign up using username/email and password these data isn't stored there so to fix fix i think we can create an separate table for storing this data and similarly if the user sign in/sign up using mobile number these data is also not storred properly so to fix this we need another table to store these data and use them during sign in process.
+
+and now lets get into the other needs the instition is gonna make subscriptions and provide access to their pateints using their instition dashboard - separate tables check if table already exist or not using this mysql -u root -proot -h localhost -P 10005 local -e "SHOW TABLES;" if exist check whether it satifies these condition 1st one for instition subscription wp_attentrack_subscriptions table is there and for payment data wp_attentrack_payments this table and for instition members wp_attentrack_institution_members.
+
+after subscribing to manager users - from institution dashboard to patient email an email to their account using that email they can create an account after they create an account, we can see all the details of their account including their test reports test data and user details and we cant modify any of the data in their profile and when they sign in under wp_attentrack_institution_members table they have to stored based on upon the instition from which they got the subscription 
+
+ 
