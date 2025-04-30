@@ -6,3 +6,6 @@ mysql -u root -proot -h localhost -P 10005 local -e "SHOW TABLES;"
 
 
 http://attentrackv2.local:10004/wp-content/themes/attentrack/admin-direct.php
+
+
+mysql -h localhost -P 10006 -u root -proot -e "SHOW TABLES FROM local;"
