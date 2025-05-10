@@ -1,0 +1,9 @@
+[2025-03-27 18:46:14] [info] Received form submission
+[2025-03-27 18:46:14] [info] Sanitized data: {"patient_id":"P6141","test_id":"T6005","user_code":"U0858","first_name":"Vasanthan","last_name":"Elumalai","age":20,"gender":"male","email":"dominicvasanth777@gmail.com","phone":"9443616269","created_at":"2025-03-27 18:46:14"}
+[2025-03-27 18:46:14] [error] Database insertion failed: Unknown column 'test_id' in 'field list'
+[2025-03-27 18:46:24] [info] Received form submission
+[2025-03-27 18:46:24] [info] Sanitized data: {"patient_id":"P6141","test_id":"T6005","user_code":"U0858","first_name":"Vasanthan","last_name":"Elumalai","age":20,"gender":"male","email":"dominicvasanth777@gmail.com","phone":"9443616269","created_at":"2025-03-27 18:46:24"}
+[2025-03-27 18:46:24] [error] Database insertion failed: Unknown column 'test_id' in 'field list'
+[2025-03-27 18:50:17] [info] Received form submission
+[2025-03-27 18:50:17] [info] Sanitized data: {"patient_id":"P6141","test_id":"T6005","user_code":"U0858","first_name":"Vasanthan","last_name":"Elumalai","age":20,"gender":"male","email":"dominicvasanth777@gmail.com","phone":"9443616269","created_at":"2025-03-27 18:50:17"}
+[2025-03-27 18:50:17] [info] Successfully inserted patient details with ID: 1

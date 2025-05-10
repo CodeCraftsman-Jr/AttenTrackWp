@@ -1,0 +1,1 @@
+2025/04/19 10:50:48 [error] 8212#12880: *987 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: ::1, server: , request: "GET /selection-page HTTP/1.1", upstream: "fastcgi://127.0.0.1:10002", host: "attentrackv2.local:10004", referrer: "http://attentrackv2.local:10004/signin/"

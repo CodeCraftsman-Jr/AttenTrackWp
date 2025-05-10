@@ -1,0 +1,16 @@
+[2025-03-28 20:26:34] [info] Starting free plan activation process
+[2025-03-28 20:26:34] [info] GET data: {"action":"activate_free_plan","_wpnonce":"4d62af461a"}
+[2025-03-28 20:26:34] [info] Processing free plan for user ID: 4, Profile ID: P6141
+[2025-03-28 20:26:34] [info] Plan dates - Start: 2025-03-28 20:26:34, End: 2025-04-27 20:26:34
+[2025-03-28 20:26:34] [info] Successfully inserted subscription record. Insert ID: 1
+[2025-03-28 20:26:34] [info] Free plan activation completed successfully. Redirecting to selection page.
+[2025-03-29 13:02:06] [info] Attempting to insert subscription with data: {"user_id":4,"profile_id":"P6141","plan_name":"basic","amount":499,"duration_months":1,"payment_id":"pay_QCcFggmeoPBGHD","order_id":"order_QCcFavb9hvaJif","status":"active","start_date":"2025-03-29 13:02:06","end_date":"2025-04-29 13:02:06","created_at":"2025-03-29 13:02:06"}
+[2025-03-29 13:02:06] [info] Successfully inserted subscription record. Insert ID: 2
+[2025-03-29 13:34:27] [info] Attempting to insert subscription with data: {"user_id":8,"profile_id":"P5617","plan_name":"basic","amount":499,"duration_months":1,"payment_id":"pay_QCcnobnnLTuvuW","order_id":"order_QCcnaWHncAVvyC","status":"active","start_date":"2025-03-29 13:34:27","end_date":"2025-04-29 13:34:27","created_at":"2025-03-29 13:34:27"}
+[2025-03-29 13:34:27] [info] Successfully inserted subscription record. Insert ID: 3
+[2025-04-06 08:19:39] [info] Attempting to insert subscription with data: {"user_id":9,"profile_id":"P5805","plan_name":"basic","amount":499,"duration_months":1,"payment_id":"pay_QFhiOze65zQl98","order_id":"order_QFhiDLYJJAgw3Y","status":"active","start_date":"2025-04-06 08:19:39","end_date":"2025-05-06 08:19:39","created_at":"2025-04-06 08:19:39"}
+[2025-04-06 08:19:40] [info] Successfully inserted subscription record. Insert ID: 4
+[2025-04-06 08:20:14] [info] Attempting to insert subscription with data: {"user_id":9,"profile_id":"P5805","plan_name":"premium","amount":999,"duration_months":1,"payment_id":"pay_QFhj0hnAa276KI","order_id":"order_QFhiuCMcatC4W3","status":"active","start_date":"2025-04-06 08:20:14","end_date":"2025-05-06 08:20:14","created_at":"2025-04-06 08:20:14"}
+[2025-04-06 08:20:14] [info] Successfully inserted subscription record. Insert ID: 5
+[2025-04-19 05:58:29] [info] Institution record created/updated with ID: 2
+[2025-04-19 06:01:08] [info] Institution record created/updated with ID: 2
