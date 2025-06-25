@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="120" viewBox="0 0 500 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- AttenTrack Logo Recreation -->
+  <g id="attentrack-logo">
+
+    <!-- Main house/building structure -->
+    <g id="building">
+      <!-- Outer building shape -->
+      <path d="M15 50 L40 25 L65 50 L65 85 L15 85 Z" fill="#1e3a8a" stroke="none"/>
+
+      <!-- Inner white section -->
+      <path d="M22 55 L40 37 L58 55 L58 78 L22 78 Z" fill="#ffffff" stroke="none"/>
+
+      <!-- Inner building detail -->
+      <rect x="28" y="60" width="24" height="15" fill="#f8fafc" stroke="none"/>
+
+      <!-- Roof line detail -->
+      <path d="M15 50 L40 25 L65 50 L60 55 L40 35 L20 55 Z" fill="#0f172a" stroke="none"/>
+    </g>
+
+    <!-- Connection system -->
+    <g id="connections">
+      <!-- Vertical connector from building -->
+      <line x1="40" y1="85" x2="40" y2="95" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Main horizontal line -->
+      <line x1="40" y1="95" x2="90" y2="95" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Connection node -->
+      <circle cx="90" cy="95" r="5" fill="#3b82f6"/>
+
+      <!-- Extended connection -->
+      <line x1="90" y1="95" x2="120" y2="95" stroke="#1e3a8a" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- End node -->
+      <circle cx="120" cy="95" r="5" fill="#1e3a8a"/>
+
+      <!-- Upward branch from building -->
+      <line x1="35" y1="60" x2="35" y2="45" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="35" cy="45" r="3" fill="#3b82f6"/>
+
+      <!-- Side connection -->
+      <line x1="35" y1="45" x2="25" y2="45" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="25" cy="45" r="3" fill="#3b82f6"/>
+    </g>
+
+    <!-- Text -->
+    <g id="text">
+      <text x="140" y="70" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="900" fill="#1e3a8a" letter-spacing="2px">ATTENTRACK</text>
+    </g>
+
+  </g>
+</svg>

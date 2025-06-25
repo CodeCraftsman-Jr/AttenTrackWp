@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .text { font-family: Arial, sans-serif; font-weight: bold; font-size: 48px; }
+        .swoosh { fill: none; stroke-width: 4; }
+        .blue { fill: #2271b1; }
+        .green { fill: #39a853; }
+        .blue-stroke { stroke: #2271b1; }
+        .green-stroke { stroke: #39a853; }
+    </style>
+    
+    <!-- AT Letters -->
+    <text x="40" y="55" class="text">
+        <tspan class="blue">A</tspan>
+        <tspan class="green">T</tspan>
+    </text>
+    
+    <!-- Swooshes -->
+    <path d="M 30,40 Q 60,20 100,40" class="swoosh green-stroke"/>
+    <path d="M 70,30 Q 100,50 130,30" class="swoosh blue-stroke"/>
+</svg>
